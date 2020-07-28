@@ -1,15 +1,14 @@
 {
-  "store_id": 1052,
-  "name": "My Shop",
-  "domain": "ecomplus-storefront.netlify.app",
-  "short_name": "My Shop",
-  "description": "My PWA Shop",
-  "primary_color": "#222831",
-  "secondary_color": "#393e46",
+  "store_id": 1137,
+  "name": "Duas Xícaras",
+  "domain": "duasxicaras.netlify.app",
+  "short_name": "Duas Xícaras",
+  "description": "A Duas Xícaras é uma loja criada por dois jovens com experiência em comércio eletrônico e que tiveram a ideia de oferecer uma proposta diferente para a compra de produtos relacionados ao mundo do café: um layout leve e descontraído, produtos de altíssima qualidade para todos os bolsos, com entrega ágil, garantia e atendimento pré e pós-venda primorosos.",
+  "primary_color": "#784226",
+  "secondary_color": "#fde9ce",
   "bg_color": "#ffffff",
   "theme": {
-    "bootswatch": "_",
-    "custom": "_"
+    "bootswatch": "_"
   },
   "logo": "/img/uploads/logo.png",
   "mini_logo": "",
