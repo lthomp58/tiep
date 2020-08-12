@@ -1,7 +1,9 @@
 {
   "marketing_stripe": {
-    "text": "Aproveite nossos descontos de até 40%!",
-    "link": "/promotion"
+    "text": "Bem vindo(a), caro(a) cliente! Entre ou Registre-se!",
+    "link": "",
+    "background": "#c68164",
+    "color": "#fde9ce"
   },
   "contacts_stripe": {
     "pages": [
