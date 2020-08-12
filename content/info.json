@@ -1,15 +1,15 @@
 {
   "shipping": {
     "show": true,
-    "text": "Entregamos para todo o Brasil"
+    "text": "Aproveite o frete GRÁTIS para produtos selecionados!"
   },
   "installments": {
     "show": true,
-    "text": "Parcele sem juros"
+    "text": "Parcele suas compras em até 4X sem juros no cartão."
   },
   "exchange": {
     "show": true,
-    "text": "Não gostou? A primeira troca é gratuita"
+    "text": "Em caso de desistência, devolva em até 7 dias."
   },
   "promo": {
     "show": true,
