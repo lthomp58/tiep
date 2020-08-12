@@ -1,22 +1,23 @@
 {
-  "store_id": 1137,
-  "name": "Duas Xícaras",
   "domain": "duasxicaras.netlify.app",
-  "short_name": "Duas Xícaras",
-  "description": "A Duas Xícaras é uma loja criada por dois jovens com experiência em comércio eletrônico e que tiveram a ideia de oferecer uma proposta diferente para a compra de produtos relacionados ao mundo do café: um layout leve e descontraído, produtos de altíssima qualidade para todos os bolsos, com entrega ágil, garantia e atendimento pré e pós-venda primorosos.",
+  "currency_symbol": "R$",
   "primary_color": "#784226",
-  "secondary_color": "#fde9ce",
-  "bg_color": "#ffffff",
   "theme": {
-    "bootswatch": "_"
+    "bootswatch": "_",
+    "custom": "_"
   },
-  "logo": "/img/uploads/logo.png",
-  "mini_logo": "",
-  "icon": "/img/icon.png",
-  "large_icon": "/img/large-icon.png",
-  "favicon": "/img/uploads/favicon.png",
+  "bg_color": "#ffffff",
+  "logo": "/img/uploads/logo-duas-xicaras.png",
+  "name": "Duas Xícaras",
+  "short_name": "Duas Xícaras",
   "lang": "pt_br",
   "currency": "BRL",
-  "currency_symbol": "R$",
-  "country_code": "BR"
+  "mini_logo": "",
+  "favicon": "/img/uploads/favicon-duas-xicaras.png",
+  "country_code": "BR",
+  "secondary_color": "#fde9ce",
+  "icon": "/img/uploads/logo-duas-xicaras.png",
+  "store_id": 1137,
+  "description": "A Duas Xícaras é uma loja criada por dois jovens com experiência em comércio eletrônico e que tiveram a ideia de oferecer uma proposta diferente para a compra de produtos relacionados ao mundo do café: um layout leve e descontraído, produtos de altíssima qualidade para todos os bolsos, com entrega ágil, garantia e atendimento pré e pós-venda primorosos.",
+  "large_icon": "/img/uploads/favicon-duas-xicaras.png"
 }
