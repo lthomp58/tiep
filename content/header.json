@@ -8,8 +8,16 @@
   "contacts_stripe": {
     "pages": [
       {
+        "title": "Inicial",
+        "link": "duasxicaras.netlify.app"
+      },
+      {
         "title": "Sobre nós",
         "link": "/pages/sobre-nos"
+      },
+      {
+        "title": "Blog",
+        "link": "duasxicaras.netlify.app/blog"
       },
       {
         "title": "Esta loja é um PWA",
