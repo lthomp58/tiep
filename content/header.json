@@ -18,10 +18,6 @@
       {
         "title": "Blog",
         "link": "duasxicaras.netlify.app/blog"
-      },
-      {
-        "title": "Esta loja é um PWA",
-        "link": "/posts/esta-loja-e-um-pwa"
       }
     ],
     "phone_wpp": true,
