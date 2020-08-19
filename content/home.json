@@ -23,6 +23,24 @@
       "enabled": true
     },
     {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/kit-hario-v60-duas-xicaras.jpg",
+          "link": "",
+          "alt": "kit-hario-v60"
+        },
+        {
+          "img": "/img/uploads/clever-duas-xicaras.jpg",
+          "alt": "clever"
+        },
+        {
+          "img": "/img/uploads/suporte-porta-capsulas-duas-xicaras.jpg",
+          "alt": "suporte porta cápsulas"
+        }
+      ]
+    },
+    {
       "type": "collection-shelf",
       "shuffle": true,
       "title": "Destaques"
