@@ -1,5 +1,5 @@
 {
-  "css": ".footer {background: #784226}\n.hearder_row.row {background: #FDE9CE}\n.header__nav.a {color: #784226}\n.top-bar {background: #784226}\n.top-bar__page-links {color: #784226}\n.top-bar__countdown {color: #FDE9CE}\n.top-bar__nav.d-none.d-md-block {background: #FDE9CE}\n.span {color: #ffff}",
+  "css": ".footer {background: #784226}\n.hearder_row.row {background: #FDE9CE}\n.header__nav.a {color: #784226}\n.top-bar {background: #784226}\n.top-bar__page-links {color: #784226}\n.top-bar__countdown {color: #FDE9CE}\n.top-bar__nav.d-none.d-md-block {background: #FDE9CE}\n.span {color: #ffff}\n.p {color: #ffff}",
   "html_head": "",
   "html_body": ""
 }
