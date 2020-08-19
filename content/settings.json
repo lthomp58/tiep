@@ -1,4 +1,8 @@
 {
+  "exchange": {
+    "text": "Em caso de desistência, devolva a mercadoria em até 7 dias.",
+    "show": true
+  },
   "domain": "duasxicaras.netlify.app",
   "currency_symbol": "R$",
   "primary_color": "#fde9ce",
@@ -10,6 +14,10 @@
   "logo": "/img/uploads/logo-duas-xicaras.png",
   "name": "Duas Xícaras",
   "short_name": "Duas Xícaras",
+  "shipping": {
+    "text": "Aproveite o frete grátis em produtos selecionados!",
+    "show": true
+  },
   "lang": "pt_br",
   "currency": "BRL",
   "mini_logo": "",
@@ -18,6 +26,10 @@
   "secondary_color": "#784226",
   "icon": "/img/uploads/favicon-duas-xicaras.png",
   "store_id": 1137,
+  "installments": {
+    "text": "Parcele suas compras em até 4X sem juros no cartão!",
+    "show": true
+  },
   "description": "A Duas Xícaras é uma loja criada por dois jovens com experiência em comércio eletrônico e que tiveram a ideia de oferecer uma proposta diferente para a compra de produtos relacionados ao mundo do café: um layout leve e descontraído, produtos de altíssima qualidade para todos os bolsos, com entrega ágil, garantia e atendimento pré e pós-venda primorosos.",
   "large_icon": "/img/uploads/favicon-duas-xicaras.png"
 }
