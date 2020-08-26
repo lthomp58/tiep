@@ -5,7 +5,7 @@
   },
   "domain": "duasxicaras.netlify.app",
   "currency_symbol": "R$",
-  "primary_color": "#bd936d",
+  "primary_color": "#784226",
   "theme": {
     "bootswatch": "_",
     "custom": "_"
@@ -23,7 +23,7 @@
   "mini_logo": "",
   "favicon": "/img/uploads/favicon-duas-xicaras.png",
   "country_code": "BR",
-  "secondary_color": "#784226",
+  "secondary_color": "#bd936d",
   "icon": "/img/uploads/favicon-duas-xicaras.png",
   "store_id": 1137,
   "installments": {
