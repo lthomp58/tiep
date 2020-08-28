@@ -3,20 +3,10 @@
   "meta_description": "",
   "sections": [
     {
-      "type": "banner-slider",
-      "autoplay": 9000,
-      "slides": [
-        {
-          "start": "2020-08-12T22:17:08.614Z",
-          "end": "",
-          "img": "/img/uploads/banner-cafeiteira-aeropress-duas-xicaras.jpg"
-        },
-        {
-          "start": "2020-08-12T22:17:42.733Z",
-          "end": "",
-          "img": "/img/uploads/banner-cafeiteiras-italianas-e-francesas-duas-xicaras.jpg"
-        }
-      ]
+      "type": "responsive-banner",
+      "img": "/img/uploads/banner-desk-capsulas-compativeis-nespresso.png",
+      "alt": "capsulas-de-cafe-compativel-nespresso",
+      "mobile_img": "/img/uploads/banner-mobile-capsulas-compativeis-nespresso.png"
     },
     {
       "type": "info-bar",
