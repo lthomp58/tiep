@@ -57,6 +57,26 @@ if (imgObj) {
         <h3 class="product-card__name">
           <%= itemData.name %>
         </h3>
+        
+        <!--
+        <%
+        const { specs } = itemData
+        if (specs && specs.length) {
+          const specCafe = specs.find(({ grid }) => grid === 'cafe')
+          switch (specCafe && specCafe.text) {
+            case 'Moído':
+              %> <img src="https://imagem_de_cafe_moido"> <%
+              break
+            case 'Torrado':
+              %> <img src="https://imagem_de_cafe_torrado"> <%
+              break
+            case 'Sachê':
+              %> <img src="https://imagem_de_cafe_sache"> <%
+              break
+          }
+        }
+        %>
+        -->
       </div>
     </a>
 
