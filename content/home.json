@@ -3,44 +3,72 @@
   "meta_description": "",
   "sections": [
     {
-      "type": "responsive-banner",
-      "img": "/img/uploads/banner-desk-capsulas-compativeis-nespresso.png",
-      "alt": "capsulas-de-cafe-compativel-nespresso",
-      "mobile_img": "/img/uploads/banner-mobile-capsulas-compativeis-nespresso.png"
-    },
-    {
-      "type": "info-bar",
-      "enabled": true
-    },
-    {
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/kit-hario-v60-duas-xicaras.jpg",
-          "link": "",
-          "alt": "kit-hario-v60"
+          "img": "/img/uploads/01.png"
         },
         {
-          "img": "/img/uploads/clever-duas-xicaras.jpg",
-          "alt": "clever"
+          "img": "/img/uploads/02.png"
         },
         {
-          "img": "/img/uploads/suporte-porta-capsulas-duas-xicaras.jpg",
-          "alt": "suporte porta cápsulas"
+          "img": "/img/uploads/03.png"
         }
       ]
     },
     {
       "type": "collection-shelf",
       "shuffle": true,
-      "title": "Destaques"
+      "collection_id": null,
+      "sort": "sales",
+      "title": "Os favoritos | de nossos clientes",
+      "limit": 12,
+      "page": 1
+    },
+    {
+      "type": "blog",
+      "enabled": true
     },
     {
       "type": "collection-shelf",
       "shuffle": true,
-      "collection_id": null,
-      "sort": "sales",
-      "title": "Mais vendidos"
+      "limit": 12,
+      "page": 1,
+      "sort": "news",
+      "title": "Novidades | Quentinhas"
+    },
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/img_cafes.png",
+          "alt": "Cafés"
+        },
+        {
+          "img": "/img/uploads/img_capsulas.png",
+          "alt": "Cápsulas"
+        },
+        {
+          "img": "/img/uploads/img_cafeteiras.png",
+          "alt": "Cafeteiras e Métodos"
+        },
+        {
+          "img": "/img/uploads/img_acessorios.png",
+          "alt": "Acessórios"
+        },
+        {
+          "img": "/img/uploads/img_moedores.png",
+          "alt": "Moedores"
+        },
+        {
+          "img": "/img/uploads/img_filtros.png",
+          "alt": "Filtros e Suprimentos"
+        },
+        {
+          "img": "/img/uploads/img_bebidas.png",
+          "alt": "Outras Bebidas"
+        }
+      ]
     }
   ]
 }
