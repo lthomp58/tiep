@@ -4,6 +4,9 @@
         max-width: 1280px;
     }
 }
+.justify-content-between{justify-content:space-between}
+.justify-content-center{justify-content:center}
+.align-items-center{align-items:center}
 #alpix .top-bar__countdown{
     background: #feedd7!important;
     color: #000!important;
@@ -370,3 +373,30 @@
 #alpix .page--home > .sections > .banners-grid:first-child .col-12{margin:0;padding:0;}
 #alpix .page--home > .sections > .banners-grid:first-child .banner{margin:0;padding:2.5px;display:block;}
 #alpix .header{box-shadow:0px 0px 0px}
+
+#alpix .page--home > .sections > .banners-grid:not(:first-child) a{position:relative;display:block;}
+#alpix .page--home > .sections > .banners-grid:not(:first-child) a > label.floating-title{
+    font-size: 1.125em;
+    position: absolute;
+    color: #fff;
+    font-weight: 600;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+}
+#alpix .page--home > .sections > .banners-grid:not(:first-child) a > label.floating-title:after{
+    content: "";
+    height: 8px;
+    width: 100px;
+    background: #728f70;
+    display: block;
+    margin: 20px auto 0 auto;
+}
+#alpix .page--home > .sections > .banners-grid:not(:first-child) a{transition:opacity .2s;}
+#alpix .page--home > .sections > .banners-grid:not(:first-child) a:hover{
+    opacity:.8
+}

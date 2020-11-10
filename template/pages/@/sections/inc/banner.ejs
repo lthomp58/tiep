@@ -34,7 +34,7 @@ if (opt.img) {
       href="<%= opt.link || 'javascript:;' %>"
       aria-label="<%= opt.alt %>"
     >
-      <picture
+      <!-- <picture
         <% if (opt.sync_load) { %>
           class="img-fluid"
         <% } else { %>
@@ -59,6 +59,22 @@ if (opt.img) {
         <% if (opt.sync_load) { %>
           <img src="<%= opt.img.replace('.webp', '.png') %>" alt="<%= opt.alt %>">
         <% } %>
+      </picture> -->
+      <picture
+          class="img-fluid"
+      >
+        <% sources.forEach(({ src, media, type }) => { %>
+          <source
+            srcset="<%= src %>"
+            media="<%- media %>"
+            <% if (type) { %>
+              type="<%- type %>"
+            <% } %>
+          >
+        <% }) %>
+        
+          <img src="<%= opt.img.replace('.webp', '.png') %>" alt="<%= opt.alt %>">
+        
       </picture>
     </a>
   </div>
