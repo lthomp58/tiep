@@ -1,1 +1,372 @@
 // Add your custom CSS here.
+@media (min-width: 1200px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1280px;
+    }
+}
+#alpix .top-bar__countdown{
+    background: #feedd7!important;
+    color: #000!important;
+    font-size: 13px;
+    font-weight: bold;
+}
+#alpix body{
+    font-family:'Montserrat'
+}
+.text-center{text-align:center}
+.text-right{text-align:right}
+.text-left{text-align:left}
+#alpix .header__buttons{text-align:right}
+#alpix .header__logo{max-height:93px;max-width:100%;}
+#alpix .logo__container{
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+}
+#alpix .header{background:#fff;}
+#alpix .header .btn-functions{
+    margin-left:1rem;
+}
+#alpix .header .btn-functions > div{align-items:center}
+#alpix .header .btn-functions > div > span{
+    font-size: 13px;
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 16px;
+    margin-left: 10px;
+    text-align:left;
+}
+#alpix .header .btn-functions > div > span #cart-count{
+    position: relative;
+    padding: 0;
+    background: transparent;
+    font-weight: 600;
+    right: auto;
+    top: auto;
+    font-size: 13px;
+}
+#alpix .header__search{width:fit-content}
+#alpix .header__search-input{
+    border-bottom: 1px solid #000;
+    width: 225px;
+    border-radius: 0;
+    font-size: 13px;
+    padding-left: 0;
+    height: 40px;
+}
+#alpix .header__search-btn{
+    margin: 0 0 0 0;
+    top: 0;
+    right: 0;
+    height: 40px;
+    padding: 0 5px 5px 0;
+}
+#alpix .header__nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+#alpix .header__nav a{
+    color: #000;
+    font-weight: 600;
+    font-size: 13px;
+}
+#alpix .header__nav a:first-child{padding-left:0}
+#alpix .header__nav a:last-child{padding-right:0}
+
+#alpix .footer__credits{
+    background: #fff;
+    border: 0;
+}
+#alpix .footer__credits h2{
+    font-size: 12px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+}
+#alpix .footer__credits span,
+#alpix .footer__credits p{
+    font-size: 11px;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    display:block;
+    margin-bottom:10px;
+}
+#alpix .footer{
+    background-image: unset;
+    background-color: #49372e;
+    padding-bottom: 0;
+    border:0;
+}
+#alpix .footer__title{
+    font-size: 1.125em;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#alpix .footer .list-unstyled{}
+#alpix .footer .list-unstyled .footer__list-icon i{color:#fff!important;font-size: 0.6875em;}
+#alpix .footer .footer__texto{
+    color: #fff;
+    font-size: 0.6875em;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+#alpix .footer .footer__texto a{color:#fff}
+#alpix .footer .list-unstyled a,
+#alpix .footer__links a{
+    color: #fff;
+    font-size: 0.6875em;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+#alpix .footer .footer__social a,
+#alpix .footer .footer__social a i{opacity:1}
+.footer__links a{font-weight:300!important;text-transform:uppercase;}
+#alpix .footer__credits{margin-top:3rem;}
+.ecom-credits{padding-top:.5rem;}
+
+#alpix .product-card__name{
+    font-size: 0.8125em;
+    text-align: center;
+    color: #000;
+    font-weight: 500;
+}
+#alpix .product-card__prices{text-align:center;}
+#alpix .product-card__prices .prices__compare{
+    display:inline-block;
+    vertical-align:middle;
+    margin-right:10px;
+}
+#alpix .product-card__prices .prices__value{
+    font-weight: 500;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.2857142857142858em;
+    color: #000;
+}
+#alpix .product-card__buy.fade{
+    opacity:1!important;
+
+}
+#alpix .product-card__buy.fade .btn{
+    background: transparent;
+    color: #000;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 32px;
+    padding: 0 2.5rem;
+    border: 1px solid #000;
+    border-radius: 32px;
+    width: fit-content;
+    margin: 1rem auto 0 auto;
+}
+#alpix .product-card__buy .fas{display:none!important}
+#alpix .product-card__link_direct{
+    font-size: 11px;
+    color: #000;
+    display: block;
+    width: fit-content;
+    border-bottom: 1px solid #000;
+    text-transform: uppercase;
+    margin: 1rem auto 0 auto;
+    font-weight: 500;
+    padding-bottom: 3px;
+    text-decoration: none!important;
+}
+#alpix .product-card:hover{box-shadow:0px 0px 0px;}
+
+#alpix .products-carousel__title{margin-top:2rem;}
+#alpix .products-carousel__title span,
+#alpix .products-carousel__title b{
+    font-weight: 800;
+    text-transform: uppercase;
+}
+#alpix .products-carousel__title b{color:#755f72}
+#alpix .products-carousel__title:before{
+    position: relative;
+    content: "\\\\\\\\\\\\\\\\\\\\\\\\";
+    color: #755f72;
+    top: auto;
+    width: auto;
+    left: auto;
+    background: transparent;
+    font-weight: bold;
+    letter-spacing: 3px;
+    display: block;
+    height: auto;
+    opacity: .5;
+    font-size: 18px;
+    margin-bottom: 1.5rem;
+}
+#alpix .card{border:0}
+#alpix .card-body{padding:1.25rem 0;}
+#alpix .card-body .card-title {    margin: 1rem 0 1.75rem 0;}
+#alpix .card-body .card-title a{
+    color: #000;
+    font-size: 19px;
+    font-weight: 800;
+}
+#alpix .card-body .card-text{
+    color: #000;
+    font-size: 13px;
+    line-height: 22px;
+    text-align: justify;
+}
+#alpix .card-body .read-more{
+    font-size: 11px;
+    color: #000;
+    display: block;
+    width: fit-content;
+    border-bottom: 1px solid #000;
+    text-transform: uppercase;
+    margin: 1.75rem 0 0 0;
+    font-weight: 500;
+    padding-bottom: 3px;
+    text-decoration: none!important;
+}
+
+#alpix .breadcrumb{}
+#alpix .breadcrumb > li{
+    color: #717171;
+    font-size: 0.6875em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#alpix .breadcrumb > li > a{color: #717171;font-weight:600;}
+#alpix .breadcrumb-item+.breadcrumb-item:before{
+    padding-right: 3px;
+    color: #717171;
+}
+
+#alpix .page--products .product__name{
+    font-size: 1.5em;
+    font-weight: 800;
+    color: #000;
+}
+#alpix .page--products .product__resume{font-size: 0.8125em;border-bottom:1px solid #000;color:#000;line-height:24px;}
+#alpix .page--products .prices--big .prices__value{
+    font-size: 1.875em;
+    font-weight: 500;
+}
+#alpix .page--products .prices__compare{}
+#alpix .page--products .prices__compare small,
+#alpix .page--products .product__discount,
+#alpix .page--products .product__short-stock,
+#alpix .page--products .product__short-stock + div.mb-3{display:none!important;}
+#alpix .page--products .prices__compare{
+    color: #6d6e71;
+    font-size: 0.9375em;
+    margin-bottom: .5rem;
+    display: block;
+}
+#alpix .page--products .product__buy button.btn{
+    height: 48px;
+    background: #78d100;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    width: 275px;
+    border-radius: 50px;
+    border: 0;
+}
+
+#alpix .page--products .variations__grid-title,
+#alpix .page--products .shipping-calculator label{
+    font-size: 0.8125em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #000;
+}
+
+#alpix .page--products .variations{
+    border-top: 1px solid #000;
+    padding-top: 1.5rem;
+    margin-top: 3rem;
+}
+
+#alpix .page--products .shipping-calculator{margin-top:3rem;}
+#alpix .page--products .shipping-calculator .form-group{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+#alpix .page--products .shipping-calculator label{
+    white-space: nowrap;
+    margin-right: 2rem;
+    margin-bottom:0;
+}
+#alpix .page--products p.lead a{display:none}
+#alpix .page--products p.lead{
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+    position: relative;
+    padding: var(--spacer-3);
+    margin: 0;
+    margin-top: 2rem;
+}
+#alpix .page--products p.lead:before {
+    position: relative;
+    content: "\\\\\\\\\\\\\\\\\\\\\\\\";
+    color: #755f72;
+    top: auto;
+    width: auto;
+    left: auto;
+    background: transparent;
+    font-weight: 700;
+    letter-spacing: 3px;
+    display: block;
+    height: auto;
+    opacity: .5;
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+#alpix .page--products .html-clearfix{
+    max-width: 60%;
+    margin: 1rem auto;
+    text-align: center;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+#alpix .page--products #product-specs .table{
+    max-width: 40%;
+    margin: 1rem auto;
+}
+#alpix .page--products #product-specs .table td{background:transparent!important;color:#000!important;}
+#alpix .page--products #product-specs .table td:first-child{font-weight:600;color:#000;text-transform:uppercase;font-weight:800;}
+#alpix .page--products #product-specs .table td:last-child{
+    text-transform:uppercase;
+    text-align:right;
+}
+#alpix .page--products .table-striped tbody tr:first-child td{border:0!important}
+#alpix .page--products .table-striped tbody tr:nth-of-type(odd){background:transparent}
+
+#alpix .footer .footer__payment-methods > img{
+    display: inline-block;
+    margin: 15px 30px 15px 0!important;
+}
+
+#alpix .page--home > .sections > .banners-grid:first-child{margin-top:0!important}
+#alpix .page--home > .sections > .banners-grid:first-child > .container{
+    width: 1920px;
+    max-width: unset;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin:0;
+    padding:0
+}
+#alpix .page--home > .sections > .banners-grid:first-child .row,
+#alpix .page--home > .sections > .banners-grid:first-child .col-12{margin:0;padding:0;}
+#alpix .page--home > .sections > .banners-grid:first-child .banner{margin:0;padding:2.5px;display:block;}
+#alpix .header{box-shadow:0px 0px 0px}

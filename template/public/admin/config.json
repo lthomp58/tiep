@@ -4,28 +4,5 @@
     "branch": "master",
     "identity_url": "https://gotrue.ecomplus.biz/1137/.netlify/identity",
     "gateway_url": "https://gitgateway.ecomplus.biz/1137/.netlify/git"
-  },
-  "collections": [
-    {
-      "name": "layout",
-      "files": [
-        {
-          "name": "footer",
-          "fields": [
-            {
-              "name": "contacts",
-              "fields": [
-                {
-                  "label": "Texto",
-                  "required": false,
-                  "name": "texto",
-                  "widget": "string"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  }
 }

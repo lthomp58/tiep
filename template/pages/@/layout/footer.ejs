@@ -5,24 +5,145 @@ const contacts = _.cms('contacts') || {}
 
 // social networks handled by contacts
 const networksWithColors = [
-  ['facebook', '#3b5998'],
-  ['youtube', '#ff0000'],
-  ['instagram', '#e1306c'],
-  ['twitter', '#1da1f2'],
-  ['pinterest', '#bd081c'],
-  ['linkedin', '#0073b1']
+  ['facebook', '#fff'],
+  ['youtube', '#fff'],
+  ['instagram', '#fff'],
+  ['twitter', '#fff'],
+  ['pinterest', '#fff'],
+  ['linkedin', '#fff']
 ]
 %>
 
+<div class="container-fluid" >  
+  <h4 class="products-carousel__title">
+    <span>Siga no  <b>Instagram</b></span>
+  </h4>
+  <div class="row type_2" id="instafeed">
+
+  </div>
+</div>
+<!-- <script>
+  !function(e) {
+    var a = {
+            host: "https://www.instagram.com/",
+            username: "",
+            tag: "",
+            container: "",
+            display_profile: !0,
+            display_biography: !0,
+            display_gallery: !0,
+            display_igtv: !1,
+            get_data: !1,
+            callback: null,
+            styling: !0,
+            items: 8,
+            items_per_row: 4,
+            margin: .5,
+            image_size: 640
+        },
+        t = {
+            150: 0,
+            240: 1,
+            320: 2,
+            480: 3,
+            640: 4
+        };
+    e.instagramFeed = function(r) {
+        var i = e.fn.extend({}, a, r);
+        if ("" == i.username && "" == i.tag) return console.error("Instagram Feed: Error, no username or tag found."), !1;
+        if (void 0 !== i.get_raw_json && (console.warn("Instagram Feed: get_raw_json is deprecated. See use get_data instead"), i.get_data = i.get_raw_json), !i.get_data && "" == i.container) return console.error("Instagram Feed: Error, no container found."), !1;
+        if (i.get_data && null == i.callback) return console.error("Instagram Feed: Error, no callback defined to get the raw json"), !1;
+        var s = "" == i.username,
+            n = s ? i.host + "explore/tags/" + i.tag + "/" : i.host + i.username + "/";
+        return e.get(n, function(a) {
+            try {
+                a = a.split("window._sharedData = ")[1].split("<\/script>")[0]
+            } catch (e) {
+                return void console.error("Instagram Feed: It looks like the profile you are trying to fetch is age restricted. See https://github.com/jsanahuja/InstagramFeed/issues/26")
+            }
+            if (void 0 !== (a = (a = JSON.parse(a.substr(0, a.length - 1))).entry_data.ProfilePage || a.entry_data.TagPage))
+                if (a = a[0].graphql.user || a[0].graphql.hashtag, i.get_data) i.callback(a);
+                else {
+                    var r = {
+                        profile_container: "",
+                        profile_image: "",
+                        profile_name: "",
+                        profile_biography: "",
+                        gallery_image: ""
+                    };
+                    if (i.styling) {
+                        r.profile_container = " style='text-align:center;'", r.profile_image = " style='border-radius:10em;width:15%;max-width:125px;min-width:50px;'", r.profile_name = " style='font-size:1.2em;'", r.profile_biography = " style='font-size:1em;'";
+                        var n = (100 - 2 * i.margin * i.items_per_row) / i.items_per_row;
+                        r.gallery_image = " style='margin:" + i.margin + "% " + i.margin + "%;width:" + n + "%;float:left;'"
+                    }
+                    var o = "";
+                    i.display_profile && (o += "<div class='instagram_profile'" + r.profile_container + ">", o += "<img class='instagram_profile_image' src='" + a.profile_pic_url + "' alt='" + (s ? a.name + " tag pic" : a.username + " profile pic") + "'" + r.profile_image + " />", o += s ? "<p class='instagram_tag'" + r.profile_name + "><a href='https://www.instagram.com/explore/tags/" + i.tag + "' rel='noopener' target='_blank'>#" + i.tag + "</a></p>" : "<p class='instagram_username'" + r.profile_name + ">@" + a.full_name + " (<a href='https://www.instagram.com/" + i.username + "' rel='noopener' target='_blank'>@" + i.username + "</a>)</p>", !s && i.display_biography && (o += "<p class='instagram_biography'" + r.profile_biography + ">" + a.biography + "</p>"), o += "</div>");
+                    var l = void 0 !== t[i.image_size] ? t[i.image_size] : t[640];
+                    if (i.display_gallery)
+                        if (void 0 !== a.is_private && !0 === a.is_private) o += "<p class='instagram_private'><strong>This profile is private</strong></p>";
+                        else {
+                            var g = (a.edge_owner_to_timeline_media || a.edge_hashtag_to_media).edges;
+                            h = g.length > i.items ? i.items : g.length, o += "", o += "";
+                            for (var d = 0; d < h; d++) {
+                                var m, _, p = "https://www.instagram.com/p/" + g[d].node.shortcode;
+                                switch (g[d].node.__typename) {
+                                    case "GraphSidecar":
+                                        _ = "sidecar", m = g[d].node.thumbnail_resources[l].src;
+                                        break;
+                                    case "GraphVideo":
+                                        _ = "video", m = g[d].node.thumbnail_src;
+                                        break;
+                                    default:
+                                        _ = "image", m = g[d].node.thumbnail_resources[l].src
+                                }
+                                void 0 !== g[d].node.edge_media_to_caption.edges[0] && void 0 !== g[d].node.edge_media_to_caption.edges[0].node && void 0 !== g[d].node.edge_media_to_caption.edges[0].node.text && null !== g[d].node.edge_media_to_caption.edges[0].node.text ? g[d].node.edge_media_to_caption.edges[0].node.text : void 0 !== g[d].node.accessibility_caption && null !== g[d].node.accessibility_caption ? g[d].node.accessibility_caption : (s ? a.name : a.username) + " image " + d, o += "<div class='p-0'>", o += "<a href='" + p + "' class='instagram-" + _ + "' rel='noopener' target='_blank'>", o += "<img src='" + m + "' style='height: auto;' />", o += "</a>", o += "</div>"
+                            }
+                            o += "", o += ""
+                        } if (i.display_igtv && void 0 !== a.edge_felix_video_timeline) {
+                        var c = a.edge_felix_video_timeline.edges,
+                            h = c.length > i.items ? i.items : c.length;
+                        if (c.length > 0) {
+                            o += "<div class='instagram_igtv'>";
+                            for (d = 0; d < h; d++) o += "<a href='https://www.instagram.com/p/" + c[d].node.shortcode + "' rel='noopener' target='_blank'>", o += "<img src='" + c[d].node.thumbnail_src + "' alt='" + i.username + " instagram image " + d + "'" + r.gallery_image + " />", o += "</a>";
+                            o += "</div>"
+                        }
+                    }
+                    e(i.container).html(o)
+                }
+            else console.error("Instagram Feed: It looks like YOUR network has been temporary banned because of too many requests. See https://github.com/jsanahuja/jquery.instagramFeed/issues/25")
+        }).fail(function(e) {
+            console.error("Instagram Feed: Unable to fetch the given user/tag. Instagram responded with the status code: ", e.status)
+        }), !0
+    }
+  }(jQuery);
+
+
+$(document).ready(function(){
+    $.instagramFeed ({
+        'username': '2xicaras',
+        'container': "#instafeed",
+        'display_profile': false,
+        'display_biography': false,
+        'display_igtv': false, 
+        'items': 6
+    });
+});
+
+</script> -->
 <footer class="footer py-3 py-lg-4 py-xl-5">
   <div class="container">
-    <div class="row">
-      <div class="col-12 col-lg-auto order-lg-last">
+    <div class="row justify-content-between">
+      <div class="col-12 col-lg-4">
         <div class="footer__contacts">
           <% if (footer.contacts.title) { %>
             <div class="footer__title">
               <%= footer.contacts.title %>
             </div>
+          <% } %>
+          <% if (footer.contacts.title) { %>
+            <p class="footer__texto">
+              <%= footer.contacts.texto %>
+            </p>
           <% } %>
 
           <ul class="list-unstyled">
@@ -58,22 +179,22 @@ const networksWithColors = [
                 </li>
               <% } %>
             <% } %>
-            <% if (footer.contacts.email) { %>
-              <li>
-                <a href="mailto:<%= contacts.email %>" target="_blank" rel="noopener">
-                  <%= contacts.email %>
-                </a>
-              </li>
-            <% } %>
-            <% if (footer.contacts.address) { %>
+            
+            <!-- <% if (footer.contacts.address) { %>
               <li>
                 <address>
                   <%= contacts.address %>
                 </address>
               </li>
-            <% } %>
+            <% } %> -->
           </ul>
-
+          <p class="footer__texto">
+            <% if (footer.contacts.email) { %>
+              <a href="mailto:<%= contacts.email %>" target="_blank" rel="noopener">
+                <%= contacts.email %>
+              </a>              
+            <% } %>
+          </p>
           <% if (footer.contacts.socials) { %>
             <p class="footer__social">
               <% networksWithColors.forEach(([network, color]) => { %>
@@ -173,46 +294,54 @@ const networksWithColors = [
         </div>
       </div>
 
-      <div class="col-12 col-xl-5 order-lg-first">
-        <h2 class="footer__title footer__store">
-          <%= footer.description.title || _.settings.name %>
-        </h2>
-        <p><%- footer.description.text || _.settings.description %></p>
+      <div class="col-12 col-lg-3">        
 
-        <div class="mt-4 mb-3">
+        <div class="">
+          <div class="footer__title">
+            <%= footer.payment_methods.title %>
+          </div>
           <p class="footer__payment-methods">
-            <% Object.keys(footer.payment_methods).forEach(method => { %>
+            <img src="/assets/visa.png" alt="Visa"/>
+            <img src="/assets/master.png" alt="Master"/>
+            <img src="/assets/boleto.png" alt="Boleto"/>
+            <img src="/assets/pp.png" alt="PayPal"/>
+            <img src="/assets/ps.png" alt="PagSeguro"/>
+            <!-- <% Object.keys(footer.payment_methods).forEach(method => { %>
               <% if (footer.payment_methods[method]) { %>
+                <img src="/assets/<%= method %>.png" alt="<%= method %>"/>
                 <i class="pay-icon pay-icon--<%= method %>"></i>
               <% } %>
-            <% }) %>
+            <% }) %> -->
           </p>
+          <div class="footer__title mt-4">
+            <%= footer.stamps_title %>
+          </div>
           <div class="footer__stamps">
             <%- await include(`@/sections/stamps`, { _, opt: { stamps: footer.stamps } }) %>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="footer__credits">
+    </div>    
+  </div>
+  <div class="footer__credits d-block">
+    <div class="container">
+      <!-- <h2 class="footer__title footer__store">
+        <%= footer.description.title || _.settings.name %>
+      </h2>
+      <p><%- footer.description.text || _.settings.description %></p> -->
       <span>
         <%= footer.credits || `© ${_.store.name} / ${contacts.address} / ${contacts.doc_number}` %>
       </span>
-      <button
-        id="go-to-top"
-        class="btn btn-primary ml-3"
-        type="button"
-        aria-label="<%= _.dictionary('goToTop') %>"
-      >
-        <i class="fas fa-chevron-up"></i>
-      </button>
+      
     </div>
   </div>
 </footer>
 
 <div class="ecom-credits">
+  <a style="display: inline-block;vertical-align: middle;margin-right: 15px;" href="https://www.alpix.dev?ref=duasxicaras">
+    <svg xmlns="http://www.w3.org/2000/svg" id="Camada_1" style="width: 26px; height: 20px;" viewBox="0 0 245.73 149.51" data-name="Camada 1"><defs><style>.cls-1{fill:#211915;}.cls-2{fill:url(#Gradiente_sem_nome_12);}</style><linearGradient id="Gradiente_sem_nome_12" gradientUnits="userSpaceOnUse" x1="240.57" y1="139.95" x2="198.5" y2="97.88"><stop stop-color="#9400d3" offset="0" /><stop stop-color="#40e0d0" offset="1" /></linearGradient></defs><title>Code By - www.alpix.dev</title><path class="cls-1" d="M 69.53 149.51 a 65.74 65.74 0 0 1 -35 -9.69 A 70.48 70.48 0 0 1 9.34 113.16 Q 0 96.2 0 74.48 q 0 -21 8.86 -37.86 A 69 69 0 0 1 33.39 9.9 Q 49.07 0 69.53 0 a 77.81 77.81 0 0 1 23.3 3.5 a 62.24 62.24 0 0 1 19.58 10 V 4.4 h 57.16 V 145.11 H 112.41 v -11 a 76.89 76.89 0 0 1 -20.68 11.54 A 64.76 64.76 0 0 1 69.53 149.51 Z m 17.59 -48.37 A 27 27 0 0 0 100.8 97.7 a 24.54 24.54 0 0 0 9.34 -9.41 a 27.11 27.11 0 0 0 3.37 -13.53 a 26.6 26.6 0 0 0 -3.44 -13.61 a 25.36 25.36 0 0 0 -9.34 -9.34 a 26.62 26.62 0 0 0 -13.61 -3.44 a 27 27 0 0 0 -13.6 3.44 A 25.37 25.37 0 0 0 64 61.22 a 26.25 26.25 0 0 0 -3.51 13.54 A 26.64 26.64 0 0 0 63.9 88.29 a 24.84 24.84 0 0 0 9.48 9.41 A 27.32 27.32 0 0 0 87.12 101.14 Z" /><rect class="cls-2" x="188.56" y="87.95" width="57.17" height="57.17" /></svg>
+  </a>  
   <a href="https://e-com.plus" target="_blank" rel="noopener">
-    Powered by
     <img
       src="https://ecom.nyc3.digitaloceanspaces.com/brand/plus/198x43.png"
       alt="E-Com Plus"

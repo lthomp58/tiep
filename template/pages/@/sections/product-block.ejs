@@ -38,32 +38,38 @@
         </div>
 
         <div class="col">
-          <h1 class="product__name">
+          <h1 class="product__name mb-3">
             <%= _.ecomUtils.name(_.state) %>
           </h1>
+          <div class="d-flex">
+            <p class="product__sku">
+              COD: <%= _.state.sku %>
+            </p>
+          </div>
+          <p class="product__resume pb-4 mb-5">
+            <%=  _.state.meta_description %>
+          </p>
           
-          <!--
+<!--           
           <%
           const { specifications } = _.state
           if (specifications && specifications.cafe && specifications.cafe.length) {
             switch (specifications.cafe[0].value) {
               case 'moido':
-                %> <img src="https://imagem_de_cafe_moido"> <%
+                %> a<img src="https://imagem_de_cafe_moido"> <%
                 break
               case 'torrado':
-                %> <img src="https://imagem_de_cafe_torrado"> <%
+                %> <bimg src="https://imagem_de_cafe_torrado"> <%
                 break
               case 'sache':
-                %> <img src="https://imagem_de_cafe_sache"> <%
+                %> c<img src="https://imagem_de_cafe_sache"> <%
                 break
             }
           }
           %>
           -->
 
-          <p class="product__sku">
-            COD: <%= _.state.sku %>
-          </p>
+          
 
           <div id="product-actions">
             <div id="product-loading">
@@ -95,7 +101,6 @@
                   <% } %>
                 >
                   <div data-slot="buy-button-content">
-                    <i class="fas fa-shopping-bag mr-1"></i>
                     <%= _.dictionary('buy') %>
                   </div>
                 </button>
@@ -103,11 +108,11 @@
             </div>
           </div>
 
-          <% if (_.state.short_description) { %>
+          <!-- <% if (_.state.short_description) { %>
             <p class="product__info lead">
               <%= _.state.short_description %>
             </p>
-          <% } %>
+          <% } %> -->
         </div>
       </div>
 

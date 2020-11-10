@@ -15,18 +15,22 @@
   },
   "contacts": {
     "title": "Contatos",
+    "texto": "NOSSO HORÁRIO DE ATENDIMENTO É DE SEG.: À SEX.: DAS 9H ÀS 17H30.",
     "phone_wpp": true,
     "socials": true,
     "email": true,
     "address": true
   },
+  "stamps_title":"Certificados",
   "stamps": [
+    
     {
       "src": "/img/uploads/ssl-safe.png",
       "alt": "Secure connection"
     }
   ],
   "payment_methods": {
+    "title":"Formas de Pagamento",
     "bb": true,
     "visa": true,
     "boleto": true,
