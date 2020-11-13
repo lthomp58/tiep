@@ -47,9 +47,24 @@
           >
             {{ name }}
           </component>
-          <p class="product__sku">
-            COD: {{ body.sku }}
-          </p>
+          
+          <div class="d-flex justify-content-between align-items-center">
+            <p class="product__sku">
+              COD: {{ body.sku }}
+            </p>
+            <div>
+              <slot name="share">
+                <a-share
+                  v-if="body.slug"
+                  class="mb-3"
+                  :url="`/${body.slug}`"
+                  :title="body.name"
+                  :description="body.short_description"
+                />
+              </slot>
+            </div>
+          </div>
+          
         </slot>
 
         <component
@@ -105,6 +120,8 @@
                   </span>
                 </slot>
               </p>
+
+              
             </slot>
 
             <slot
@@ -156,10 +173,14 @@
               v-if="isKit"
               class="product__kit"
             >
+            <label class="kit__title">Selecione os itens do kit</label>
               <slot
                 name="kit"
                 v-bind="{ kitItems }"
               >
+
+              
+
                 <transition enter-active-class="animated fadeInUp">
                   <quantity-selector
                     v-if="kitItems.length"
@@ -200,7 +221,6 @@
                       :disabled="hasClickedBuy && !isOnCart"
                     >
                       <slot name="buy-button-content">
-                        <i class="fas fa-shopping-bag mr-1"></i>
                         {{ strBuy }}
                       </slot>
                     </button>
@@ -219,17 +239,8 @@
               </p>
             </template>
 
-            <slot name="share">
-              <a-share
-                v-if="body.slug"
-                class="mb-3"
-                :url="`/${body.slug}`"
-                :title="body.name"
-                :description="body.short_description"
-              />
-            </slot>
-
-            <transition enter-active-class="animated fadeInUp">
+            
+            <!-- <transition enter-active-class="animated fadeInUp">
               <slot
                 name="payment-gateways"
                 v-bind="{ paymentOptions }"
@@ -278,7 +289,7 @@
                   </div>
                 </article>
               </slot>
-            </transition>
+            </transition> -->
 
             <p
               v-if="body.production_time && body.production_time.days"

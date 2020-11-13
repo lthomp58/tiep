@@ -5,6 +5,34 @@
         <a href="#description" name="description">#</a>
         <%= _.dictionary('productDescription') %>
       </p>
+
+      <%  
+      const { specifications } = _.state
+      if (specifications && specifications.graudetorra && specifications.graudetorra.length) { %>        
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10">
+            <div class="html-clearfix">
+              <h3>Grau de Torra</h3>
+            </div>
+            <div class="graudetorra__ruler">
+              <span class="ruler_position <%= specifications.graudetorra[0].value %>"></span>
+            </div>
+            <div class="row d-flex justify-content-between">
+              <div class="col">
+                <label>Leve</label>
+              </div>
+              <div class="col text-center">
+                <label>Média</label>
+              </div>
+              <div class="col text-right">
+                <label>Forte</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      <% } %>
+          
       <div class="html-clearfix">
         <%- _.state.body_html.replace(
           /<img ([^/>]+)?src=['"]([^'"]+)['"]([^/>]+)?\/?>/g,

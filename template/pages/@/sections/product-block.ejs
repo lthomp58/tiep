@@ -50,27 +50,30 @@
             <%=  _.state.meta_description %>
           </p>
           
-<!--           
-          <%
-          const { specifications } = _.state
-          if (specifications && specifications.cafe && specifications.cafe.length) {
-            switch (specifications.cafe[0].value) {
-              case 'moido':
-                %> a<img src="https://imagem_de_cafe_moido"> <%
-                break
-              case 'torrado':
-                %> <bimg src="https://imagem_de_cafe_torrado"> <%
-                break
-              case 'sache':
-                %> c<img src="https://imagem_de_cafe_sache"> <%
-                break
-            }
-          }
-          %>
-          -->
-
+          <div class="specification__row row d-flex justify-content-start">
+            <%
+            const { specifications } = _.state
+            
+            if (specifications && specifications.metodo && specifications.metodo.length) {
+            %>
+            <div class="col-auto">
+              <label class="d-block specification__title" for="<%= specifications.metodo[0].value %>">
+                Método
+              </label>
+              <span><i class="specification__ico metodo <%= specifications.metodo[0].value %>"></i><%= specifications.metodo[0].text %></span>
+            </div>
+           <% } 
+           if (specifications && specifications.graudetorra && specifications.graudetorra.length) {
+            %>
+            <div class="col-auto">
+              <label class="d-block specification__title" for="<%= specifications.graudetorra[0].value %>">
+                Grau de Torra
+              </label>
+              <span><i class="specification__ico graudetorra <%= specifications.graudetorra[0].value %>"></i><%= specifications.graudetorra[0].text %></span>
+            </div>
+           <% } %>
+          </div>
           
-
           <div id="product-actions">
             <div id="product-loading">
               <% if (_.state.available && _.state.visible && _.ecomUtils.inStock(_.state)) { %>
@@ -87,6 +90,7 @@
                 </div>
               <% } %>
 
+              
               <div class="spinner-border m-4" role="status">
                 <span class="sr-only">Loading...</span>
               </div>
@@ -108,6 +112,7 @@
             </div>
           </div>
 
+          
           <!-- <% if (_.state.short_description) { %>
             <p class="product__info lead">
               <%= _.state.short_description %>
@@ -115,6 +120,8 @@
           <% } %> -->
         </div>
       </div>
+
+      
 
       <%- await include('@/helpers/widgets-append', {
         _, opt: {}, field: 'productSlots'

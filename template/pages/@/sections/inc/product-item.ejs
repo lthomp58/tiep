@@ -58,26 +58,7 @@ if (imgObj) {
           <%= itemData.name %>
         </h3>
       
-      <%
-       const { specs } = itemData
-        if (specs && specs.length) {
-          const specCafe = specs.find(({ grid }) => grid === 'metodo')
-          switch (specCafe && specCafe.text) {
-            case 'Moído':
-              %> aaa <%
-              break
-            case 'Torrado':
-              %> bbb <%
-              break
-            case 'Sachê':
-              %> ccc <%
-              break
-            case 'Grãos':
-              %> ddd <%
-              break
-          }
-        }
-        %>
+      
        
       </div>
     </a>
@@ -118,4 +99,13 @@ if (imgObj) {
 >
 Ver Produto
 </a>
+  <%
+    const { specs } = itemData
+    if (specs && specs.length) {
+      const specCafe = specs.find(({ grid }) => grid === 'metodo')
+      %><%= specCafe.text %><%
+    }
+  %>
+  <%- JSON.stringify(specs) %>
+        
 </article>

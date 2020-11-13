@@ -167,6 +167,11 @@
     width: fit-content;
     margin: 1rem auto 0 auto;
 }
+#alpix .product-card:hover .product-card__buy.fade .btn{
+    background: #755f72;
+    border-color: #755f72;
+    color:#fff;
+}
 #alpix .product-card__buy .fas{display:none!important}
 #alpix .product-card__link_direct{
     font-size: 11px;
@@ -180,6 +185,8 @@
     padding-bottom: 3px;
     text-decoration: none!important;
 }
+#alpix .product-card .prices__installments,
+#alpix .product-card .prices__discount{display:none;}
 #alpix .product-card:hover{box-shadow:0px 0px 0px;}
 
 #alpix .products-carousel__title{margin-top:2rem;}
@@ -267,9 +274,11 @@
     margin-bottom: .5rem;
     display: block;
 }
-#alpix .page--products .product__buy button.btn{
+#alpix .page--products .product__buy button.btn,
+#alpix .page--products .quantity-selector__buy button.btn{
     height: 48px;
-    background: #78d100;
+    // background: #78d100;
+    background:#755f72;
     color: #fff;
     font-size: 14px;
     font-weight: 800;
@@ -280,6 +289,8 @@
 }
 
 #alpix .page--products .variations__grid-title,
+#alpix .page--products .kit__title,
+#alpix .specification__row label,
 #alpix .page--products .shipping-calculator label{
     font-size: 0.8125em;
     text-transform: uppercase;
@@ -287,10 +298,15 @@
     color: #000;
 }
 
-#alpix .page--products .variations{
-    border-top: 1px solid #000;
-    padding-top: 1.5rem;
-    margin-top: 3rem;
+// #alpix .page--products .variations{
+//     border-top: 1px solid #000;
+//     padding-top: 1.5rem;
+//     margin-top: 3rem;
+// }
+#alpix .page--products .product__prices{
+    border-bottom: 1px solid #000;
+    padding-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 #alpix .page--products .shipping-calculator{margin-top:3rem;}
@@ -400,3 +416,156 @@
 #alpix .page--home > .sections > .banners-grid:not(:first-child) a:hover{
     opacity:.8
 }
+
+
+#alpix .page--products .quantity-selector__input{
+    border: 0;
+    border-bottom: 1px solid #000;
+    border-radius: 0;
+    font-weight: 600;
+    color: #212529;
+    font-size: 0.8571428571428571em;
+    height:36px;
+}
+#alpix .page--products .quantity-selector__item button {
+    color: #212529;
+    border-bottom: 1px solid #000;
+    border-radius: 0;
+    height: 36px;
+}
+#alpix .page--products .quantity-selector__item button i:before{font-weight:bold;}
+#alpix .page--products .quantity-selector__item button i.fa-chevron-up:before{content: "+";}
+#alpix .page--products .quantity-selector__item button i.fa-chevron-down:before{content: "-";}
+#alpix .page--products .quantity-selector__label{margin-left:1rem;}
+#alpix .page--products .quantity-selector__label a{
+    color: #212529;
+    font-size: 0.8571428571428571em;
+    font-weight: 500;
+}
+#alpix .page--products .product__prices .prices__installments{margin-bottom:5px;}
+#alpix .page--products .product__prices .prices__installments,
+#alpix .page--products .product__prices .prices__discount{
+    color: #6d6e71;
+    font-size: 0.9375em;
+    font-weight:600;
+}
+#alpix .page--products .product__prices .prices__discount span,
+#alpix .page--products .product__prices .prices__installments span{font-weight: 600;}
+
+#alpix .page--products .product__prices .prices__installments:before{
+    content: "";
+    background-image: url(/assets/cartao_prod.png);
+    width: 16px;
+    height: 11px;
+    display: inline-block;
+    margin-right: .5rem;
+    vertical-align: middle;
+}
+#alpix .page--products .product__prices .prices__discount:before{
+    content:"";
+    background-image:url(/assets/boleto_prod.png);
+    width: 16px;
+    height: 11px;
+    display: inline-block;
+    margin-right: .5rem;
+    vertical-align: middle;
+}
+
+#alpix .specification__row{
+    margin-top: -1.5rem;
+    margin-bottom: 1.5rem;
+}
+#alpix .specification__row span{
+    padding-top: 10px;
+    color: #6d6e71;
+    font-size: .8125em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: block;
+}
+#alpix .specification__row span .specification__ico{}
+#alpix .specification__row span .specification__ico.graudetorra{
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 50%;
+    margin-top: -2px;
+}
+#alpix .specification__row span .specification__ico.graudetorra.leve{background:#a67c52}
+#alpix .specification__row span .specification__ico.graudetorra.media{background:#603913}
+#alpix .specification__row span .specification__ico.graudetorra.forte{background:#000;}
+#alpix .specification__row:not(:empty){
+    position: relative;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+#alpix .specification__row:not(:empty):before{
+    content: "";
+    position: absolute;
+    width: calc(100% - 30px);
+    border-bottom: 1px solid #000;
+    left: 15px;
+    bottom: 0;
+}
+
+#alpix .page--products #product-description .html-clearfix h1,
+#alpix .page--products #product-description .html-clearfix h2,
+#alpix .page--products #product-description .html-clearfix h3,
+#alpix .page--products #product-description .html-clearfix h4,
+#alpix .page--products #product-description .html-clearfix h5{
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    position: relative;
+    margin: 3rem 0 2rem;
+    color: #000;
+}
+#alpix .page--products #product-description .html-clearfix h1:before,
+#alpix .page--products #product-description .html-clearfix h2:before,
+#alpix .page--products #product-description .html-clearfix h3:before,
+#alpix .page--products #product-description .html-clearfix h4:before,
+#alpix .page--products #product-description .html-clearfix h5:before{
+    content:"";
+    height:8px;
+    width:90px;
+    display:block;
+    margin:0 auto 20px auto;
+    background:#755f72;
+}
+
+.graudetorra__ruler{
+    background: #a67c52;
+    background: linear-gradient(90deg,#a67c52,#603913 51%,#000);
+    height: 16px;
+    border-radius: 30px;
+    margin-bottom: 2rem;
+    position:relative
+}
+.graudetorra__ruler .ruler_position{
+    height: 40px;
+    width: 40px;
+    background: #ccc;
+    position: absolute;
+    top: calc(50% - 20px);
+    border: 4px solid #fff;
+    border-radius: 50%;
+}
+.graudetorra__ruler .ruler_position.leve{
+    background:#a67c52;
+    left:0;
+}
+.graudetorra__ruler .ruler_position.media{
+    background:#603913;
+    left: calc(50% - 20px);
+}
+.graudetorra__ruler .ruler_position.forte{
+    background:#000;
+    right:0;
+    left:auto;
+}
+
+.graudetorra__ruler + .row label{text-transform:uppercase;font-size:13px;color:#6d6e71;font-weight:500;}
+.product-card__prices .prices__value:first-child{margin:0;}
+.product-card__link:hover{text-decoration:none;}
