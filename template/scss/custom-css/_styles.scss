@@ -26,7 +26,7 @@
     display: block;
     margin: 0 auto;
 }
-#alpix .header{background:#fff;}
+#alpix .header{background:#fff;padding-bottom:0;}
 #alpix .header .btn-functions{
     margin-left:1rem;
 }
@@ -569,3 +569,88 @@
 .graudetorra__ruler + .row label{text-transform:uppercase;font-size:13px;color:#6d6e71;font-weight:500;}
 .product-card__prices .prices__value:first-child{margin:0;}
 .product-card__link:hover{text-decoration:none;}
+
+.product-item{position:relative;padding:0 1rem;}
+.product-item > .listing__labels{
+    height: 96px;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 1rem;
+    z-index: 2;
+    background-repeat: no-repeat;
+    pointer-events:none;
+}
+
+
+#alpix .product-card .specification__row:before{display:none;}
+#alpix .product-card .specification__row:not(:empty){
+    margin:0;
+}
+#alpix .product-card .specification__row .specification__ico{height:18px!important;width:18px!important}
+.w-100{width:100%;}
+.header__nav > ul{padding:0;list-style-type:none}
+.dx-caret{
+    border-top: 6px solid #000;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    vertical-align: middle;
+    display: inline-block;
+}
+.header__nav .dx-caret{
+    margin: -3px 0px 0 -5px;
+}
+#alpix .header,
+#alpix .header__container{margin-bottom:0;border-bottom:0;}
+#alpix .header__nav > ul > li{}
+#alpix .header__nav > ul > li > span{position:relative;display:block;padding-bottom:0.5rem;}
+#alpix .header__nav  > ul > li:hover > span:before,
+#alpix .header__nav  > ul > li.open > span:before{
+    content: "";
+    height: 6px;
+    background: #49372e;
+    width: 100%;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+}
+#alpix .header__nav .dropdown{position:initial}
+#alpix .header__nav .dropdown.open > .dropdown-menu,
+#alpix .header__nav .dropdown:hover > .dropdown-menu{
+    pointer-events:all;
+    margin:0;
+    opacity:1;
+}
+#alpix .header__nav .dropdown .dropdown-menu{
+    background: #49372e;
+    border: 0;
+    border-radius: 0;
+    top: 100%;
+    width: 100%;
+    padding: 2rem 1rem;
+    margin:15px 0 0 0;
+    display:flex;
+    justify-content:flex-start;
+    pointer-events:none;
+    opacity:0;
+    transition:all .3s;
+}
+#alpix .header__nav .dropdown .dropdown-menu > li > a{font-size:12px;font-weight:800;text-transform:uppercase;color:#fff;}
+#alpix .header__nav .dropdown .dropdown-menu > li > ul{list-style-type:none;padding:0;margin:.5rem 0 1rem 0;}
+#alpix .header__nav .dropdown .dropdown-menu > li > ul > li{}
+#alpix .header__nav .dropdown .dropdown-menu > li > ul > li > a{line-height:12px;display:inline-block;text-transform:initial;font-size:12px;font-weight:500;color:#feedd7}
+#alpix .page--home>.sections>.banners-grid:first-child{margin-top:-2.5px!important}
+
+#alpix .header__nav .dropdown .dropdown-menu:before{
+    content: "";
+    position: absolute;
+    background: #49372e;
+    top: 0;
+    width: 3000px;
+    left: calc(-50%);
+    height: 100%;
+    box-shadow: 0px 3px 3px rgba(0,0,0,.3);
+}
+
+#alpix .header__nav a:hover{background:transparent!important}
+#alpix .header__nav .dropdown-menu a:hover{text-decoration:underline;}

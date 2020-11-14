@@ -285,19 +285,71 @@ if (header.categories_list) {
 
       
         
+      <% 
+        const categoryParents = _.lodash.groupBy(_.categories, ({ parent }) => {
+          return !parent || !parent.slug ? '_' : parent.slug
+        })
+        const getSubmenuId = slug => `a-${slug.replace(/\//g, '_')}`
+      %>
       
-
       <% if (categories && categories.length) { %>
         <div class="d-none d-lg-block <%= isCategoriesNavFull ? 'col-12 order-lg-last' : 'col' %>">
           <nav class="header__nav<%= isCategoriesNavFull ? ' header__nav--full' : '' %>">
-            <% categories.forEach(({ slug, name }) => { %>
-              <a href="javascript:;" onclick="toggleSidenav('<%= slug %>')">
-                <%= ` ${name} ` %>
-              </a>
+            <ul class="d-flex justify-content-between w-100 m-0">
+            <% categories.forEach(({ slug, name, _id }) => { %>
+              <li class="<%- categoryParents[slug] ? 'dropdown' : '' %>">
+                <span>
+                  <a href="/<%= slug %>">
+                    <%= ` ${name} ` %> 
+                  </a>
+                  <%- categoryParents[slug] ? '<i class="dx-caret"></i>' : '' %>
+                </span>
+                <% if (categoryParents[slug]) { %>
+                  <ul class="dropdown-menu row mx-0">
+                  <% categoryParents[slug].forEach(subcategory => { %>
+                    <% const hasSubmenu = Array.isArray(categoryParents[subcategory.slug]) %>
+                    <li class="col-auto pr-5 mr-5">
+                      <a href="/<%= subcategory.slug %>">
+                        <%= subcategory.name %>
+                      </a>
+                      <% if (hasSubmenu) { %>
+                        <ul>
+                          <% categoryParents[subcategory.slug].forEach(subcategory_ => { %>
+                            <li>
+                              <a href="/<%= subcategory_.slug %>">
+                                <%= subcategory_.name %>
+                              </a>
+                            </li>
+                          <% }) %>
+                        </ul>
+                      <% } %>
+                    </li>
+                  <% }) %>
+                    <%                      
+                      const itemMenu = categories.find( arr => arr._id === _id )                      
+                      if (itemMenu && itemMenu.icon) {
+                        console.log(itemMenu)
+                      %> 
+                      <li class="col-auto ml-auto">
+                        <img
+                          src="<%= itemMenu.icon.url %>"
+                          alt="<%= itemMenu.icon.alt || itemMenu.name %>"
+                        >
+                      </li>
+                    <% } %>  
+                  </ul>
+                <% } %>
+              </li>
             <% }) %>
+          </ul>
           </nav>
         </div>
       <% } %>
     </div>
   </div>
 </header>
+<div>
+  
+  
+</div>
+

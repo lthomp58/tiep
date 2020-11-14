@@ -18,6 +18,18 @@ if (imgObj) {
 %>
 
 <article class="product-item" data-product="<%= JSON.stringify(itemData) %>">
+  <%
+  const { specs } = opt.item
+  if (specs && specs.length) {
+    const specCafe = specs.find(({ grid }) => grid === 'metodo')
+    if (specCafe) {
+    %> 
+      <span class="listing__labels <%- specCafe.text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase() %>" style="background-image:url(/img/uploads/tag_<%- specCafe.text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase() %>.png);"></span>
+    <%
+    }
+  }
+  %>
+  
   <div
     class="product-card"
     data-product-id="<%= itemData._id %>"
@@ -52,15 +64,31 @@ if (imgObj) {
           </picture>
         <% } %>
       </div>
+      
 
       <div data-slot="title">
         <h3 class="product-card__name">
           <%= itemData.name %>
         </h3>
+        <div class="product_list_adjust">
+          <%
+          if (specs && specs.length) {
+            const specCafe = specs.find(({ grid }) => grid === 'graudetorra')
+            if (specCafe) {
+            %> 
+              <div class="specification__row row d-flex justify-content-center">
+                <div class="col-auto">
+                  <span><i class="specification__ico graudetorra  <%- specCafe.text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase() %>"></i><%= specCafe.text %></span>
+                </div>
+              </div>
+            <%
+            }
+          }
+          %>  
+        </div>
+      </div>    
       
-      
-       
-      </div>
+     
     </a>
 
     <div class="product-card__prices prices">
@@ -93,19 +121,10 @@ if (imgObj) {
     _, opt, field: 'productItemAppend'
   }) %>
   <a
-  href="/<%= itemData.slug %>"
-  class="product-card__link_direct"
-  title="<%= itemData.name %>"
->
-Ver Produto
-</a>
-  <%
-    const { specs } = itemData
-    if (specs && specs.length) {
-      const specCafe = specs.find(({ grid }) => grid === 'metodo')
-      %><%= specCafe.text %><%
-    }
-  %>
-  <%- JSON.stringify(specs) %>
-        
+    href="/<%= itemData.slug %>"
+    class="product-card__link_direct"
+    title="<%= itemData.name %>"
+  >
+    Ver Produto
+  </a>
 </article>

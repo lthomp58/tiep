@@ -30,6 +30,6 @@ if($('.page--home').length){
 
 if($('.product-card').length){
     $(document).ready(function(){
-        $('#alpix .product-card__name').equalHeights();
+        $('#alpix .product-card__name, #alpix .product_list_adjust').equalHeights();
     });
 }
