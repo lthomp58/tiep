@@ -142,6 +142,7 @@ if (header.categories_list) {
               aria-label="<%= _.dictionary('searchProducts') %>"
               class="header__search-input form-control"
               id="search-input"
+              autocomplete="off"
             >
             <button
               type="submit"
@@ -328,7 +329,6 @@ if (header.categories_list) {
                     <%                      
                       const itemMenu = categories.find( arr => arr._id === _id )                      
                       if (itemMenu && itemMenu.icon) {
-                        console.log(itemMenu)
                       %> 
                       <li class="col-auto ml-auto">
                         <img
