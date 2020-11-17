@@ -8,11 +8,22 @@
         const opt = sections[i]
         if (opt && opt.enabled !== false) {
           %>
+          
           <%- await include(`@/sections/${opt.type}`, { _, opt }) %>
           <%
         }
       }
     }
     %>
+
+    <% if (_.pageName.includes('posts/')) { %>
+      <br class="pt-5">
+      <h4 class="products-carousel__title mt-5 pt-5">
+      <span>Veja mais <b>artigos</b></span>
+      </h4>
+      
+      <%- await include(`@/sections/blog`, { _ }) %>      
+    <% } %>
+
   </div>
 </article>

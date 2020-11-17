@@ -24,10 +24,7 @@
     "socials": true
   },
   "categories_list": {
-    "featured": [
-      "/cafes?Cafés",
-      "/capsulas?Cápsulas"
-    ],
+    "featured": [],
     "random": 6,
     "full_width": true
   },

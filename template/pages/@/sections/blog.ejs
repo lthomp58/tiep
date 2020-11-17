@@ -1,6 +1,12 @@
+
 <%
-const posts = _.cms('posts')
-if (Array.isArray(posts) && posts.length) {
+var posts = _.cms('posts')
+if (_.pageName.includes('posts/') || _.pageName.includes('home') ) {
+  posts = _.cms('posts').splice(0,2)
+}
+%>
+
+<% if (Array.isArray(posts) && posts.length) {
   %>
     <div class="blog my-4 my-lg-5">
       <div class="container">

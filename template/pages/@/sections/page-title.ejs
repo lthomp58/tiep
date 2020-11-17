@@ -12,7 +12,7 @@ if (title) {
         >
       <% } %>
       <h1 class="my-0">
-        <%= title %>
+        <%= title.split('|')[0] %> <b><%= title.split('|')[1] %></b>
       </h1>
     </div>
     <%

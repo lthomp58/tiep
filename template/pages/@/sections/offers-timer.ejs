@@ -7,27 +7,40 @@ if (Array.isArray(opt.offers) && opt.offers.length) {
 
   <section class="offers-timer my-4 my-lg-5">
     <div class="container">
-      <div class="row">
-        <div
-          <% if (items.length <= 3) { %>
-            class="col-12 col-md-<%= (7 - items.length) %>"
-          <% } else { %>
-            class="col-12 col-lg-3"
+      <div class="row align-items-center">
+        <div class="col-12 col-md-5 offset-md-1">          
+          <% 
+            console.log(opt)
+            const itemData = {}
+            const imgObj = _.ecomUtils.img(items[0], null, 'big')
+            if (imgObj) {
+              itemData.pictures = [{
+                _id: _.ecomUtils.randomObjectId(),
+                normal: imgObj
+              }]
+            }
+          
+          %>
+          <% if (imgObj) { %>
+            <picture>
+              <img
+                data-src="<%= imgObj.url %>"
+                alt="<%= imgObj.alt %>"
+                class="lozad-delay fade"
+                style="max-width:100%;"
+              >
+            </picture>
           <% } %>
-        >
-          <%- await include('@/sections/inc/timer', { _, opt }) %>
+          
         </div>
-
-        <div class="col-12 col-md">
-          <div class="row">
-            <% for (let i = 0; i < items.length; i++) { %>
-              <div class="col-6 col-md">
-                <%- await include('@/sections/inc/product-item', {
-                  _, opt: { item: items[i] }
-                }) %>
-              </div>
-            <% } %>
-          </div>
+        <div class="col-12 col-md-4 offset-md-1 product-columns">
+          <h3 class="text-center">
+            <%= items[0].name %>
+          </h3>
+          <% if (opt.notes) { %>
+            <p class="text-center mb-4 pb-2"><%= opt.notes %></p>
+          <%  } %>
+          <a class="btn btn-primary btn-block" href="/<%= items[0].slug %>">Comprar</a>
         </div>
       </div>
     </div>
