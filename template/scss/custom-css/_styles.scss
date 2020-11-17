@@ -9,6 +9,7 @@ body.loaded{opacity:1;}
 .justify-content-between{justify-content:space-between}
 .justify-content-center{justify-content:center}
 .align-items-center{align-items:center}
+.align-items-bottom{align-items:flex-end}
 #alpix .top-bar__countdown{
     background: #feedd7!important;
     color: #000!important;
@@ -811,3 +812,37 @@ body.loaded{opacity:1;}
 }
 
 .offers-timer{border:0!important;}
+
+#alpix .mosaico-footer .banner + .banner{margin-top:2rem;}
+
+#alpix #page-home .newsletter{
+    align-items:center;
+    margin-top:5rem;
+}
+#alpix #page-home .newsletter img{margin-top: -10rem;}
+#alpix #page-home .newsletter p{
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: justify;
+    color: #000;
+}
+#alpix #page-home .newsletter form{}
+#alpix #page-home .newsletter form input{
+    height: 36px;
+    border: 0;
+    border-bottom: 1px solid #000;
+    width: calc(100% - 30px);
+    font-size: 12px;
+    color: #000;
+    margin-left: 30px;
+
+}
+#alpix #page-home .newsletter form button{
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 36px;
+    border: 1px solid #000;
+    border-radius: 36px;
+    padding: 0 26px;
+}
