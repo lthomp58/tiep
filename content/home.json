@@ -73,6 +73,27 @@
           "alt": "Outras Bebidas"
         }
       ]
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": true,
+      "limit": 12,
+      "page": 1,
+      "title": "Promoções | imperdíveis"
+    },
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/mb_1.png"
+        },
+        {
+          "img": "/img/uploads/mb_2.png"
+        },
+        {
+          "img": "/img/uploads/mb_3.png"
+        }
+      ]
     }
   ]
 }
