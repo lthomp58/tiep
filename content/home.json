@@ -6,13 +6,16 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/01.png"
+          "img": "/img/uploads/01.png",
+          "mobile_img": "/img/uploads/01mobile.png"
         },
         {
-          "img": "/img/uploads/02.png"
+          "img": "/img/uploads/02.png",
+          "mobile_img": "/img/uploads/02mobile.png"
         },
         {
-          "img": "/img/uploads/banner03_v2.png"
+          "img": "/img/uploads/banner03_v2.png",
+          "mobile_img": "/img/uploads/03mobile.png"
         }
       ]
     },
@@ -85,7 +88,8 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/mb_1.png"
+          "img": "/img/uploads/mb_1.png",
+          "mobile_img": "/img/uploads/mb_mobile.png"
         },
         {
           "img": "/img/uploads/02_new.png"
