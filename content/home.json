@@ -45,15 +45,15 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/img_cafes.png",
+          "img": "/img/uploads/cafes_ok.png",
           "alt": "Cafés"
         },
         {
-          "img": "/img/uploads/img_capsulas.png",
+          "img": "/img/uploads/capsulas_ok.png",
           "alt": "Cápsulas"
         },
         {
-          "img": "/img/uploads/img_cafeteiras.png",
+          "img": "/img/uploads/cafeteiras_ok.png",
           "alt": "Cafeteiras e Métodos"
         },
         {
