@@ -37,10 +37,10 @@
       "checkout.7e7c1bcd295a50313685.js.map"
     ],
     "storefront": [
-      "storefront.c868e1e8bf8c45c8d5ee.css",
-      "storefront.360811ddaadd9ffe6971.js",
-      "storefront.c868e1e8bf8c45c8d5ee.css.map",
-      "storefront.360811ddaadd9ffe6971.js.map"
+      "storefront.f101e85bc30736c989db.css",
+      "storefront.2212b319a0a2c3bda287.js",
+      "storefront.f101e85bc30736c989db.css.map",
+      "storefront.2212b319a0a2c3bda287.js.map"
     ],
     "vendors~app-checkout": [
       "chunk.90fa9c8baa42a0e304c9.js",
