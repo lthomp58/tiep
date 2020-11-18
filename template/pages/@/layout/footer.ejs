@@ -36,6 +36,31 @@ const networksWithColors = [
 </script>
 <footer class="footer py-3 py-lg-4 py-xl-5">
   <div class="container">
+    <div class="d-block d-md-none mb-5">
+      <div class="newsletter">
+        <div class="row">
+          <div class="col-12">
+            <div class="footer__title">
+              <span>Assine nossa <b>Newsletter</b></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-5">
+            <form>
+              <div class="row">
+                <div class="col pr-1">
+                  <input type="text" placeholder="Digite seu e-mail aqui" name="mail">
+                </div>
+                <div class="col-auto pl-1">
+                  <button type="submit" class="btn btn-default">Cadastrar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="row justify-content-between">
       <div class="col-12 col-lg-4">
         <div class="footer__contacts">
@@ -120,17 +145,10 @@ const networksWithColors = [
       </div>
 
       <div class="col-12 col-sm-6 col-lg">
-        <a
-          class="footer__title"
-          data-toggle="collapse"
-          href="#footer-pages"
-          role="button"
-          aria-expanded="false"
-          aria-controls="footer-pages"
-        >
+        <div class="footer__title">
           <%= footer.links_1.title || _.dictionary('pages') %>
-        </a>
-        <div class="collapse" id="footer-pages">
+        </div>
+        <div id="footer-pages">
           <% if (footer.links_1.list_pages) { %>
             <ul class="footer__links">
               <% (_.cms('pages') || []).forEach(slug => { %>
@@ -158,7 +176,7 @@ const networksWithColors = [
         </div>
       </div>
 
-      <div class="col-12 col-sm-6 col-lg">
+      <div class="col-12 col-sm-6 col-lg d-none d-md-block">
         <a
           class="footer__title"
           data-toggle="collapse"

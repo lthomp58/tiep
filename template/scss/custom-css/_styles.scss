@@ -4,7 +4,7 @@
         max-width: 1280px;
     }
 }
-body{opacity:0;}
+body:not(.app){opacity:0;}
 body.loaded{opacity:1;}
 .justify-content-between{justify-content:space-between}
 .justify-content-center{justify-content:center}
@@ -690,7 +690,7 @@ body.loaded{opacity:1;}
     border-top: 4px solid #4f2209;
     margin-top: 15px;
 }
-// #alpix #header #instant-search .search__box.card .search__header{display:none;}
+#alpix #header #instant-search .search__box.card .search__header{display:none;}
 #alpix #header #instant-search .search__box.card .search-engine__results{}
 #alpix #header #instant-search .search__box.card .search-engine__results .search-engine__info h3{display:none;}
 #alpix #header #instant-search .search__box.card .search-engine__results .search-engine__retail{}
@@ -815,10 +815,10 @@ body.loaded{opacity:1;}
 
 #alpix .mosaico-footer .banner + .banner{margin-top:2rem;}
 
-#alpix #page-home .newsletter{
-    align-items:center;
+#alpix #page-home .newsletter > .row:first-child{
     margin-top:5rem;
 }
+#alpix #page-home .newsletter > .row{align-items:center;}
 #alpix #page-home .newsletter img{margin-top: -10rem;}
 #alpix #page-home .newsletter p{
     font-size: 18px;
@@ -835,7 +835,7 @@ body.loaded{opacity:1;}
     font-size: 12px;
     color: #000;
     margin-left: 30px;
-
+    outline:none;
 }
 #alpix #page-home .newsletter form button{
     font-size: 12px;
@@ -845,4 +845,83 @@ body.loaded{opacity:1;}
     border: 1px solid #000;
     border-radius: 36px;
     padding: 0 26px;
+}
+
+@media(min-width:100px) and (max-width:768px){
+    #alpix .page--home>.sections>.banners-grid:first-child>.container{
+        width:100%;
+        left:0;
+        transform:unset;
+    }
+    #alpix #header{padding:0; margin:0.5rem 0;}
+    #alpix .m-search.collapse{display:block;}
+    #alpix .header__search-input{
+        width:100%;
+        background:#e1e1e1;
+        border:0;
+        border-radius:36px;
+        padding:0 15px;
+        margin:1rem 0 .5rem 0;
+        height:36px;
+        font-size:12px;
+    }
+    #alpix .header__search-btn{height:36px;right:5px;}
+    #alpix .header__search{width:100%;}
+    #alpix .page--home>.sections>.banners-grid:first-child .banner{padding:.5rem 1rem;}
+    #alpix .products-carousel__title b{display:block;}
+    #alpix .page-title__head:before, #alpix .products-carousel__title:before{
+        font-size:12px;
+    }
+    #alpix .offers-timer a, #alpix .product-card .product-card__buy.fade .btn{
+        max-width:100%;
+        padding:0 1.5rem;
+    }
+    #alpix .products-carousel__title{padding-left:0;padding-right:0;}
+    
+    #alpix .glide .product-card{padding:0 2rem;}
+    .glide__arrows--outer .glide__arrow--left{left:-7.5px;}
+    .glide__arrows--outer .glide__arrow--right{right:-7.5px}
+
+    #alpix #page-home .collection-shelf + .banners-grid{display:none;}
+    #alpix .footer .newsletter > .row{margin-top:1rem!important}
+    #alpix .footer .footer__title,
+    #alpix .footer .footer__title *{text-align:center;font-weight:800;font-size:20px;}
+    #alpix .footer .newsletter form input{
+        background:transparent;
+        border-color:#fff!important;
+        width:100%!important;
+        margin-left:0!important;
+        max-width:100%;
+    }
+    #alpix .footer .newsletter form input::-webkit-input-placeholder {
+    color: white;
+    }
+      
+    #alpix .footer .newsletter form input:-ms-input-placeholder {
+    color: white;
+    }
+    
+    #alpix .footer .newsletter form input::placeholder {
+    color: white;
+    }
+    #alpix .footer .newsletter button{
+        border:1px solid #fff!important;
+        color:#fff;
+        font-weight:400!important;
+        height:32px!important;
+        padding:0 20px!important;
+    }
+    .footer__links{text-align:center;}
+    #alpix .footer .footer__payment-methods>img{margin:15px 15px!important;}
+    .footer__payment-methods,
+    footer .stamps{
+        text-align:center;
+        justify-content: center;
+    }
+    #alpix .footer .footer__texto{padding: 0 2rem;text-align:center;}
+    #alpix .footer .list-inline,
+    #alpix .footer .list-unstyled,
+    .footer__social{text-align:center;}
+
+    #alpix .mosaico-footer + .custom-html{display:none;}
 }
