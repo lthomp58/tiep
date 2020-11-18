@@ -133,7 +133,6 @@ if (header.categories_list) {
 <header class="header" id="header">
   <div class="header__container container-fluid">
     <div class="header__row row">
-      
       <div
           class="order-lg-first order-last  d-none d-lg-block col-12 col-lg collapse m-search show"
           id="search-bar"
@@ -184,7 +183,7 @@ if (header.categories_list) {
           <% } %>
         </div>
       <div class="col d-block d-md-none">
-        <button
+        <!-- <button
           class="btn header__toggler d-inline-block d-md-none"
           type="button"
           onclick="toggleSidenav()"
@@ -196,7 +195,8 @@ if (header.categories_list) {
               Menu
             </span>
           <% } %>
-        </button>
+        </button> -->
+        <button type="button" class="toggleMenu" onclick=""></button>
       </div>
       <div class="col col-lg">
         <a href="/" class="logo__container">
@@ -304,7 +304,42 @@ if (header.categories_list) {
       %>
       
       <% if (categories && categories.length) { %>
-        <div class="d-none d-lg-block <%= isCategoriesNavFull ? 'col-12 order-lg-last' : 'col' %>">
+        <div class="menu__ d-lg-block <%= isCategoriesNavFull ? 'col-12 order-lg-last' : 'col' %>">
+          <div class="close-mobile d-block d-md-none">
+            <button type="button" class="toggleMenu  open" onclick=""></button>          
+          </div>          
+          <div class="d-flex d-md-none menu__headermobile justify-content-between">
+            <a
+              id="user-button"
+              class="btn btn-lg btn-functions"
+              role="button"
+              href="/app/#/account/"
+              title="<%= _.dictionary('myAccount') %>"
+            >
+              <div class="d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="26" viewBox="0 0 23 26"> <image id="minha_conta" data-name="minha conta" width="23" height="26" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAaCAYAAABctMd+AAABoElEQVRIia2WMUtCURiGHzUiE8otgoSCaClrl9qkfoHQEES06BoSrTbX76jRpmhwiVxdaogaBG2sQZDI8nbjwHvhdvF6vV5fkM9z3u977vEczndlBG0B18AHYCteAZujFA/TMdAX1MR31/gHOBoXvANYQA84AeY0Pw+cAt960PY48LpWuO/jH8ivhwUvqvAxIO9JeYuDzLhP0Zpi0KoePPkjwWcVrQC44yfDwF8U1wPgjv8akPdPMaCllS375KzIb4UBOzrTYd0CCY+X0LytvNBKAc8C3AAZATIa2/JT48CNVoG2QJZuqKVxW34kpYEL10PaGqejgr2KhUn2HpSfZoAFYAmYVtPqR1llFrgEGq5OaLs6ZEN+Ngx0A6h5YB31mXvFjsevqW6oimqlpuANqOgWem9yXPMV5dmqK/rBy66ffO7XLwYoqXxn68relD0Zn0A+zB66lFe94ew60+b0m5osjAl2VBCnKS6HmqhGBDuqime43GmQmxA8J57h0lXPCHX7hshwDK87BfzqzW72aVIyvC/zpaS/D+5LEfXTA0p/mkCKTpV0ZvQAAAAASUVORK5CYII="/></svg>
+                <span>
+                  Minha <br>
+                  Conta
+                </span>
+              </div>
+            </a>
+            <a
+              id="orders-button"
+              class="btn btn-lg btn-functions"
+              role="button"
+              href="/app/#/account/orders"
+              title="Meus pedidos"
+            >
+              <div class="d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"> <image id="meus_pedidos" data-name="meus pedidos" width="24" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABUElEQVRIid3VsUocURQG4G/FJqjEEERREEQrq9jpE9gIVoKVhZ0g6DvYWAYJWKlNIPgC9oKNgopYiqBCCrMQRBDEDWy4eDaMy7rubmYbf7hzZube8/9zzr1njsAnFFHOcdxjoSLwJWfyyih2eolDzGseq1jBGrbD+wBD1QKPuGpB4C7s74z/n3TpaIGsUXS3U2AOn3GZl0B/2GWcYDeeN6v3oFWMhN9oxn8LX/MSOMY0fmAPZzhPE3kJlMIe4Xt2op2n6J0JlP+TpxC2VD1RESiGHWhRYDjsr3qLfkYkE02SfwjicqYeamI9Fp3iY4PkKQM74bdfa0Ehc98bBZLCvcE3XNQh78MiJiP3U1FwdTEev9tmmsoDZl8jLdR414MlzGCwTrXfRlPZwPVbX942pAi6Ip95ITX71Nn+IW1ono3+CWMV9nTMkmKeSH39uaLxF0DLftV73gu4AAAAAElFTkSuQmCC"/></svg>
+                <span>
+                  Meus <br>
+                  Pedidos
+                </span>
+              </div>
+            </a>
+          </div>
           <nav class="header__nav<%= isCategoriesNavFull ? ' header__nav--full' : '' %>">
             <ul class="d-flex justify-content-between w-100 m-0">
             <% categories.forEach(({ slug, name, _id }) => { %>
@@ -317,9 +352,10 @@ if (header.categories_list) {
                 </span>
                 <% if (categoryParents[slug]) { %>
                   <ul class="dropdown-menu row mx-0">
+                    <li class="d-block d-md-none btn-back"><button type="button"><i class="fas fa-arrow-left mr-1"></i> Voltar</button></li>
                   <% categoryParents[slug].forEach(subcategory => { %>
                     <% const hasSubmenu = Array.isArray(categoryParents[subcategory.slug]) %>
-                    <li class="col-auto pr-5 mr-5">
+                    <li class="col-12 col-md-auto pr-5 mr-5">
                       <a href="/<%= subcategory.slug %>">
                         <%= subcategory.name %>
                       </a>
@@ -340,7 +376,7 @@ if (header.categories_list) {
                       const itemMenu = categories.find( arr => arr._id === _id )                      
                       if (itemMenu && itemMenu.icon) {
                       %> 
-                      <li class="col-auto ml-auto">
+                      <li class="col-auto ml-auto d-none d-md-block">
                         <img
                           src="<%= itemMenu.icon.url %>"
                           alt="<%= itemMenu.icon.alt || itemMenu.name %>"

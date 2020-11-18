@@ -1,9 +1,7 @@
 // Add your custom JavaScript for storefront pages here.
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? true : false;
 !function(a){a.fn.equalHeights=function(){var b=0,c=a(this);return c.each(function(){var c=a(this).innerHeight();c>b&&(b=c)}),c.css("height",b)},a("[data-equal]").each(function(){var b=a(this),c=b.data("equal");b.find(c).equalHeights()})}(jQuery);
-$(document).ready(function(){
-    $('body').addClass('loaded');
-})
+$('body').addClass('loaded');
 if($('.page--home').length){
     //mosaico principal
     if(isMobile){
@@ -33,24 +31,27 @@ if($('.page--home').length){
     })
     
 }
+$('.toggleMenu').click(function(){
+    $('.menu__').toggleClass('visible');
+})
+$('.menu__ .dropdown .dx-caret').click(function(){
+    $(this).closest('li').toggleClass('open');
+});
+$('.menu__ .dropdown .btn-back button').click(function(){
+    $(this).closest('.dropdown').removeClass('open');
+});
 
+if($('.product-card').length){
+    $('#alpix .product-card__name, #alpix .product_list_adjust').equalHeights();
+}
+$('#alpix .header__search-input').keyup(function(){
+    $('body .search__input').val($(this).val()).[0].dispatchEvent(new Event('input'));
+});
 
-$(document).ready(function(){
-    if($('.product-card').length){
-        $('#alpix .product-card__name, #alpix .product_list_adjust').equalHeights();
+$('body').click(function(e){
+    if($(e.target).closest('.header__search').length == 0){
+        $('#instant-search .search__status .close').click();
     }
-    $('#alpix .header__search-input').keyup(function(){
-        $('body .search__input').val($(this).val()).[0].dispatchEvent(new Event('input'));
-    });
-
-    $('body').click(function(e){
-        if($(e.target).closest('.header__search').length == 0){
-            $('#instant-search .search__status .close').click();
-        }
-    });
-
-    
-    
 });
 
 function getHTML(oObj){
