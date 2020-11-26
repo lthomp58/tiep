@@ -1,4 +1,5 @@
 <div id="product-block" class="product-block my-4 mb-lg-5">
+  <input type="hidden" name="maxQtdKit" value="<%= _.state.min_quantity%>">
   <div class="container">
     <section
       id="product"
@@ -66,7 +67,7 @@
               <label class="d-block specification__title" for="<%= specifications.metodo[0].value %>">
                 Método
               </label>
-              <span><i class="specification__ico metodo <%= specifications.metodo[0].value %>"></i><%= specifications.metodo[0].text %></span>
+              <span><i class="specification__ico metodo <%= specifications.metodo[0].value %>" style="background-image:url(/img/uploads/produto_<%= specifications.metodo[0].value %>.png)"></i><%= specifications.metodo[0].text %></span>
             </div>
            <% } 
            if (specifications && specifications.graudetorra && specifications.graudetorra.length) {

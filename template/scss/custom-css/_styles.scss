@@ -1,4 +1,26 @@
 // Add your custom CSS here.
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+.shake{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+}
 @media (min-width: 1200px){
     .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 1280px;
@@ -284,7 +306,7 @@ body.loaded{opacity:1;}
 #alpix .page--products .quantity-selector__buy button.btn{
     height: 48px;
     // background: #78d100;
-    background:#755f72;
+    background:#6ccf7a;
     color: #fff;
     font-size: 14px;
     font-weight: 800;
@@ -293,7 +315,18 @@ body.loaded{opacity:1;}
     border-radius: 50px;
     border: 0;
 }
-
+#alpix .specification__ico.metodo{
+    height: 24px;
+    width: 24px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 50%;
+    margin-top: -2px;
+}
 #alpix .page--products .variations__grid-title,
 #alpix .page--products .kit__title,
 #alpix .specification__row label,
@@ -371,7 +404,7 @@ body.loaded{opacity:1;}
 }
 
 #alpix .page--products .html-clearfix{
-    max-width: 60%;
+    max-width: 80%;
     margin: 1rem auto;
     text-align: center;
     font-weight: 500;
@@ -447,6 +480,7 @@ body.loaded{opacity:1;}
     color: #212529;
     font-size: 0.8571428571428571em;
     height:36px;
+    pointer-events:none;
 }
 #alpix .page--products .quantity-selector__item button {
     color: #212529;
@@ -778,21 +812,30 @@ body.loaded{opacity:1;}
 
 #alpix .page-title__head{display:block;margin-top:2.5rem;}
 #alpix .page-title__head h1{
+    // font-weight: 800;
+    // text-transform: uppercase;
+    // font-size: 1.5rem;
+    // color:#000;
+    // text-align:left;
+    // display:block;
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 1.5rem;
-    color:#000;
-    text-align:center;
-    display:block;
+    font-size: 2rem;
+    color: #000;
+    text-align: left;
+    display: block;
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 1rem;
 }
 #alpix .page-title__head h1 b{
     color: #755f72;
     font-weight: 800;
 }
 #alpix .page-title__head:before{
-    width:fit-content;
-    margin-left:auto;
-    margin-right:auto;
+//     width:fit-content;
+//     margin-left:auto;
+//     margin-right:auto;
+    margin-bottom:1rem;
 }
 
 #alpix [data-cms-collection="posts"]{}
@@ -908,6 +951,88 @@ header .toggleMenu:after{
     left: 0;
 }
 
+#alpix .blog .product-card__link_direct{
+    margin:1rem 0 0 0;
+}
+
+#alpix .product-card .badge.badge-dark{
+    background: #000;
+    color: #fff;
+    opacity: 1;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .8rem;
+    text-align: center;
+    display: block;
+    height: 34px;
+    border-radius: 34px;
+    line-height: 34px;
+    width: fit-content;
+    margin: 2.3rem auto 0 auto;
+    padding: 0 2rem;
+}
+#alpix .header__search .product-card .badge.badge-dark{
+    color:#000;
+    font-size:12px;
+    background:transparent;
+    padding:0;
+    margin:0;
+}
+#alpix #sidebar-filter{}
+#alpix #sidebar-filter .search-engine__aside .search-engine__filter button[data-toggle="collapse"] i,
+// #alpix #sidebar-filter .search-engine__aside .card-header{display:none!important}
+// #alpix #sidebar-filter .search-engine__aside{
+//     position:relative;
+//     display:block!important;
+// }
+
+#alpix #sidebar-filter .search-engine__aside .search-engine__filter button[data-toggle="collapse"]{
+    pointer-events: none;
+    font-weight: 800;
+    text-transform: initial;
+    font-size: 1.1rem;
+    color: #534251;
+}
+#alpix #sidebar-filter .search-engine__aside .search-engine__filter .custom-control-label{
+    color:#000;
+    font-size: 12px;
+    padding: 3px 0;
+    margin: 3px 0;
+}
+
+#alpix .category-description .container .html-clearfix{
+    border-top: 1px solid #f2f2f2;
+    padding-top:2rem;
+    max-width:80%;
+    margin: 0 auto 2rem auto;
+}
+#alpix .category-description .container .html-clearfix,
+#alpix .category-description .container .html-clearfix div{font-size:.8rem;}
+#alpix .category-description .html-clearfix{max-height:200px;overflow:hidden;position:relative;transition:max-height .3s;}
+#alpix .category-description.expand .html-clearfix{max-height:1000px;}
+#alpix .category-description .html-clearfix:before{
+    content:"";
+    position:absolute;
+    height:100%;
+    width:100%;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    transition:opacity .2s;
+}
+#alpix .category-description.expand .html-clearfix:before{opacity:0;pointer-events:none;}
+#alpix .category-description .see-more{
+    background: #755f72;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+    border-radius: 40px;
+    outline:none;
+    height: 40px;
+    border: 0;
+    padding: 0 2rem;
+    margin: 0 auto;
+    display: block;
+}
 @media(min-width:100px) and (max-width:768px){
     #alpix .page--home>.sections>.banners-grid:first-child>.container{
         width:100%;
@@ -1095,5 +1220,17 @@ header .toggleMenu:after{
     }
     #alpix .card-body .card-title{margin:0 0 1rem 0;}
 
-
+    #alpix #header #instant-search .search__box.card{
+        max-width:100%;
+    }
+    #alpix #header #instant-search .search__box.card .product-card__pictures{display:none;}
+    #alpix #header #instant-search .search__box.card .search-engine__results .search-engine__retail>.row>div .product-card .product-card__name{padding-left:0;width: 100%;font-size:.7rem;}
+    #alpix #header #instant-search .search-engine__item{padding:0;}
+    #alpix #header #instant-search .search-engine__info{padding-bottom:0;}
+    #alpix #header #instant-search .product-card__prices .prices__compare{font-size:.8rem;}
+    #alpix #header #instant-search .product-card__prices .prices__value{font-size:.8rem;}
+    #alpix #header #instant-search .search__body{
+        min-height: unset;
+        max-height: calc(100vh - 250px);
+    }
 }

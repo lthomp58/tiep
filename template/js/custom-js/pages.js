@@ -17,10 +17,7 @@ if($('.page--home').length){
     $('#alpix .page--home > .sections > .banners-grid:not(:first-child) .col-12').attr('class','col-12 col-md-auto px-1 py-1');
     $('#alpix .page--home > .sections > .banners-grid:not(:first-child) .row').addClass('justify-content-center align-items-center mx-0');
 
-    $('#alpix .page--home > .sections > .banners-grid:not(:first-child) a').each(function(){
-        let title = $(this).find('img').attr('alt');
-        $(this).append('<label class="floating-title">'+ title +'</label>');
-    });
+    
 
     $('#alpix .banners-grid').each(function(){
         if($(this).find('.col-12').length == 3){
@@ -29,11 +26,23 @@ if($('.page--home').length){
             $(this).find('.row').empty().append(i);
         }
     })
+
+    $('#alpix .page--home > .sections > .banners-grid:not(:first-child):not(.mosaico-footer) a').each(function(){
+        let title = $(this).find('img').attr('alt');
+        $(this).append('<label class="floating-title">'+ title +'</label>');
+    });
     
 }
 $('.toggleMenu').click(function(){
     $('.menu__').toggleClass('visible');
 })
+
+if(isMobile){
+    $('.menu__ .dropdown > span > a').click(function(e){
+        e.preventDefault();
+        $(this).closest('li').toggleClass('open');
+    });    
+}
 $('.menu__ .dropdown .dx-caret').click(function(){
     $(this).closest('li').toggleClass('open');
 });
@@ -53,6 +62,26 @@ $('body').click(function(e){
         $('#instant-search .search__status .close').click();
     }
 });
+
+$('body').on('click','.product__kit button', function(){
+    var qtd = 0;
+    var max = parseInt($('[name="maxQtdKit"]').val());
+    var me = $(this)
+    $('.product__kit .quantity-selector__input').each(function(){
+        qtd = qtd + parseInt($(this).val());
+    });
+    if(qtd == max){
+        $('#alpix .page--products .quantity-selector__buy button.btn').addClass('shake');
+        setTimeout(function(){ $('#alpix .page--products .quantity-selector__buy button.btn').removeClass('shake'); }, 1000);
+        $('.product__kit .quantity-selector__input + button').addClass('disabled');
+    }else{
+        $('#alpix .page--products .quantity-selector__buy button.btn').removeClass('disabled');
+        $('.product__kit .quantity-selector__input + button').removeClass('disabled');
+    }
+})
+
+
+
 
 function getHTML(oObj){
     return $('<div></div>').append($(oObj)).html();

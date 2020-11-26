@@ -6,8 +6,11 @@ if (_.state.body_html) {
   <section class="<%= className %>-description my-4 my-lg-5">
     <div class="container">
       <div class="html-clearfix">
-        <%- _.state.body_html %>
-      </div>
+        <%- _.state.body_html %>        
+      </div>  
+      <% if (className == "category"){ %>
+        <button class="see-more" onclick='$(".category-description").toggleClass("expand");var text = $(this).text();$(this).text(text == "Leia Mais" ? "Ocultar" : "Leia Mais");'>Leia Mais</button>
+      <% }%>    
     </div>
   </section>
 <% } %>

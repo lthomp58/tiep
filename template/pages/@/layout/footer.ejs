@@ -13,7 +13,7 @@ const networksWithColors = [
   ['linkedin', '#fff']
 ]
 %>
-
+<% if ( _.pageName.includes('home')){ %>
 <div class="container-fluid" >  
   <h4 class="products-carousel__title">
     <span>Siga no  <b>Instagram</b></span>
@@ -22,18 +22,7 @@ const networksWithColors = [
 
   </div>
 </div>
-<script>
-  (function() {
-      new instagramFeed ({
-          'username': '2xicaras',
-          'container': "#instafeed",
-          'display_profile': false,
-          'display_biography': false,
-          'display_igtv': false, 
-          'items': 6
-    });
-  })();
-</script>
+<% } %>
 <footer class="footer py-3 py-lg-4 py-xl-5">
   <div class="container">
     <div class="d-block d-md-none mb-5">
@@ -223,17 +212,17 @@ const networksWithColors = [
             <%= footer.payment_methods.title %>
           </div>
           <p class="footer__payment-methods">
-            <img src="/assets/visa.png" alt="Visa"/>
+            <!-- <img src="/assets/visa.png" alt="Visa"/>
             <img src="/assets/master.png" alt="Master"/>
             <img src="/assets/boleto.png" alt="Boleto"/>
             <img src="/assets/pp.png" alt="PayPal"/>
-            <img src="/assets/ps.png" alt="PagSeguro"/>
-            <!-- <% Object.keys(footer.payment_methods).forEach(method => { %>
+            <img src="/assets/ps.png" alt="PagSeguro"/> -->
+            <% Object.keys(footer.payment_methods).forEach(method => { %>
               <% if (footer.payment_methods[method]) { %>
-                <img src="/assets/<%= method %>.png" alt="<%= method %>"/>
+                <!-- <img src="/assets/<%= method %>.png" alt="<%= method %>"/> -->
                 <i class="pay-icon pay-icon--<%= method %>"></i>
               <% } %>
-            <% }) %> -->
+            <% }) %>
           </p>
           <div class="footer__title mt-4">
             <%= footer.stamps_title %>
@@ -270,3 +259,19 @@ const networksWithColors = [
     >
   </a>
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<script src="/assets/instafeed.min.js"></script>
+<script>
+  $(window).on('load', function(){
+    $.instagramFeed({
+        'username': '2xicaras',
+        'container': "#instafeed",
+        'display_profile': false,
+        'display_biography': false,
+        'display_igtv': false, 
+        'items': 6
+
+    });
+});
+</script>

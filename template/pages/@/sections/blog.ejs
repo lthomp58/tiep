@@ -2,18 +2,18 @@
 <%
 var posts = _.cms('posts')
 if (_.pageName.includes('posts/') || _.pageName.includes('home') ) {
-  posts = _.cms('posts').splice(0,2)
+  posts = _.cms('posts').reverse().splice(0,2)
 }
 %>
 
 <% if (Array.isArray(posts) && posts.length) {
   %>
-    <div class="blog my-4 my-lg-5">
+    <div class="blog my-4 my-lg-5 ">
       <div class="container">
         <div class="row">
           <% posts.forEach(slug => { %>
             <% const { title, thumbnail, description } = _.cms(`posts/${slug}`) %>
-            <div class="col-12 col-md-6 col-lg-6">
+            <div class="col-12 col-md-6 col-lg-6 mb-4 mb-md-0">
               <div class="card">
                 <% if (thumbnail) { %>
                   <a href="/posts/<%= slug %>">
@@ -31,8 +31,11 @@ if (_.pageName.includes('posts/') || _.pageName.includes('home') ) {
                     </a>
                   </h5>
                   <p class="card-text">
-                    <%= description %>
+                    <%= description.substring(0,360) %>...
                   </p>
+                  <a href="/posts/<%= slug %>" class="product-card__link_direct">
+                    Continuar Lendo
+                  </a>
                 </div>
               </div>
             </div>
