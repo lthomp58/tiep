@@ -49,31 +49,38 @@
       "banners": [
         {
           "img": "/img/uploads/cafes_ok.png",
-          "alt": "Cafés"
+          "alt": "Cafés",
+          "link": "/cafes"
         },
         {
           "img": "/img/uploads/capsulas_ok.png",
-          "alt": "Cápsulas"
+          "alt": "Cápsulas",
+          "link": "/capsulas"
         },
         {
           "img": "/img/uploads/cafeteiras_ok.png",
-          "alt": "Cafeteiras e Métodos"
+          "alt": "Cafeteiras e Métodos",
+          "link": "/cafeteiras-e-metodos"
         },
         {
           "img": "/img/uploads/img_acessorios.png",
-          "alt": "Acessórios"
+          "alt": "Acessórios",
+          "link": "/acessorios"
         },
         {
           "img": "/img/uploads/img_moedores.png",
-          "alt": "Moedores"
+          "alt": "Moedores",
+          "link": "/moedores"
         },
         {
           "img": "/img/uploads/img_filtros.png",
-          "alt": "Filtros e Suprimentos"
+          "alt": "Filtros e Suprimentos",
+          "link": "/filtros-e-suprimentos"
         },
         {
           "img": "/img/uploads/img_bebidas.png",
-          "alt": "Outras Bebidas"
+          "alt": "Outras Bebidas",
+          "link": "/outras-bebidas"
         }
       ]
     },
