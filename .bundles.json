@@ -1,28 +1,28 @@
 {
   "assetsByChunkName": {
     "vendors~app-account~app-confirmation~app-order": [
-      "chunk.786d3e3a80153234b011.js",
-      "chunk.786d3e3a80153234b011.js.map"
+      "chunk.9a8879b7e88ac051ade1.js",
+      "chunk.9a8879b7e88ac051ade1.js.map"
     ],
     "vendors~app-account~app-checkout": [
       "chunk.e531b245e53133a2e94c.js",
       "chunk.e531b245e53133a2e94c.js.map"
     ],
     "vendors~app-cart~app-checkout": [
-      "chunk.b10d839de4ad9f96cf1f.js",
-      "chunk.b10d839de4ad9f96cf1f.js.map"
+      "chunk.fa1f75fe5264fef8fb7a.js",
+      "chunk.fa1f75fe5264fef8fb7a.js.map"
     ],
     "admin": [
-      "admin.114156695411c100c061.js",
-      "admin.114156695411c100c061.js.map"
+      "admin.bbafe0379ac03eab6212.js",
+      "admin.bbafe0379ac03eab6212.js.map"
     ],
     "app-account": [
       "chunk.ce313a81ffd175156a4f.js",
       "chunk.ce313a81ffd175156a4f.js.map"
     ],
     "app-cart": [
-      "chunk.7bf771f9ceb310929410.js",
-      "chunk.7bf771f9ceb310929410.js.map"
+      "chunk.395984d45e28d6bd4f73.js",
+      "chunk.395984d45e28d6bd4f73.js.map"
     ],
     "app-confirmation": [
       "chunk.8035ca82bf2aa2c4fc9f.js",
@@ -33,18 +33,18 @@
       "chunk.cdfb5bdc1a41fb06a3a5.js.map"
     ],
     "checkout": [
-      "checkout.a2f9a77c25ee1cc01bb8.js",
-      "checkout.a2f9a77c25ee1cc01bb8.js.map"
+      "checkout.b2aac3c82de24ea69351.js",
+      "checkout.b2aac3c82de24ea69351.js.map"
     ],
     "storefront": [
-      "storefront.b06a51a4b360e141084f.css",
-      "storefront.c77dc111b90ab580e49c.js",
-      "storefront.b06a51a4b360e141084f.css.map",
-      "storefront.c77dc111b90ab580e49c.js.map"
+      "storefront.2b4cc7d54be19938459e.css",
+      "storefront.9464461fdd71b98d956e.js",
+      "storefront.2b4cc7d54be19938459e.css.map",
+      "storefront.9464461fdd71b98d956e.js.map"
     ],
     "vendors~app-checkout": [
-      "chunk.9df3f4c3a65704b2396d.js",
-      "chunk.9df3f4c3a65704b2396d.js.map"
+      "chunk.66c450e0ba40f5c59d18.js",
+      "chunk.66c450e0ba40f5c59d18.js.map"
     ]
   }
 }
