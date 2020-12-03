@@ -78,10 +78,39 @@ $('body').on('click','.product__kit button', function(){
         $('#alpix .page--products .quantity-selector__buy button.btn').removeClass('disabled');
         $('.product__kit .quantity-selector__input + button').removeClass('disabled');
     }
-})
+});
 
 
+// $('[name="mc-embedded-subscribe-form"]').submit(function(e){
+//     e.preventDefault();
 
+//     var xhr = new XMLHttpRequest();
+
+//     var form = document.getElementById('mc-embedded-subscribe-form');
+//     var actionPath = form.getAttribute("action");
+//     var formData = new FormData(form);
+
+    
+//     xhr.open("POST", actionPath);
+//     xhr.send(formData); 
+
+//     // $.ajax({
+//     //     type: $(this).attr('method'),
+//     //     url: $(this).attr('action'),
+//     //     data: $(this).serialize(),
+//     //     cache       : false,
+//     //     dataType    : 'json',
+//     //     contentType: "application/json; charset=utf-8",
+//     //     error       : function(err) { alert("Ocorreu um erro ao se registrar na newsletter. Por favor, tente novamente mais tarde."); },
+//     //     success     : function(data) {
+//     //         if (data.result != "success") {
+//     //             alert('Ops...Aconteceu um erro ao se cadastrar na newsletter.');
+//     //         } else {
+//     //             alert('Sua inscrição em nossa lista foi confirmada.\nObrigado por se inscrever!');
+//     //         }
+//     //     }
+//     // });
+// });
 
 function getHTML(oObj){
     return $('<div></div>').append($(oObj)).html();

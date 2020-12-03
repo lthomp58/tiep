@@ -1237,3 +1237,64 @@ header .toggleMenu:after{
         max-height: calc(100vh - 250px);
     }
 }
+
+
+.lgpd {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    border-radius: .4rem;
+    padding: 1rem .4rem;
+    background-color: #fff;
+    box-shadow: 0 0 40px 0 rgba(0,0,0,.15);
+    z-index: 1000;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+@media (max-width: 991.98px) {
+    .lgpd {
+        bottom:.5rem;
+        left: .5rem;
+        right: .5rem;
+        padding:15px;
+        max-width:90%;
+    }
+
+    .lgpd .product-buy-button {
+        width: 100%;
+        margin-top:15px;
+    }
+}
+
+.lgpd .text {
+    color: #000;
+    font-size: 12px;
+    line-height: initial;
+}
+
+.lgpd .text a {
+    text-decoration: underline;
+    color: #49372e;
+}
+#lgpd button:hover{color:#fff;background:#000}
+#lgpd button{
+    color: #000;
+    font-weight: 700;
+    display: block;
+    white-space: nowrap;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-size: 12px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    outline: none;
+    transition:all .2s
+}
+
+@media (min-width: 991.98px) {
+    #lgpd .row{display:flex;align-items:center;}
+    #lgpd button{}
+    
+}
