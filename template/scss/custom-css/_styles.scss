@@ -162,7 +162,7 @@ body.loaded{opacity:1;}
     color: #000;
     font-weight: 500;
 }
-#alpix .product-card__prices{text-align:center;}
+#alpix .product-card__prices{text-align:center;min-height:25px}
 #alpix .product-card__prices .prices__compare{
     display:inline-block;
     vertical-align:middle;
@@ -242,6 +242,8 @@ body.loaded{opacity:1;}
 }
 #alpix .card{border:0}
 #alpix .card-body{padding:1.25rem 0;}
+#alpix .login-modal__header.card-header{text-align:left;}
+#alpix .login-modal__body.card-body{padding:1rem}
 #alpix .card-body .card-title {    margin: 1rem 0 1.75rem 0;}
 #alpix .card-body .card-title a{
     color: #000;
@@ -291,7 +293,8 @@ body.loaded{opacity:1;}
     font-size: 1.875em;
     font-weight: 500;
 }
-#alpix .page--products .prices__compare{}
+#alpix .page--products .prices__compare{display:inline-block!important}
+
 #alpix .page--products .prices__compare small,
 #alpix .page--products .product__discount,
 #alpix .page--products .product__short-stock,
