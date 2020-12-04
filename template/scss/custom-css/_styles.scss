@@ -1307,3 +1307,9 @@ header .toggleMenu:after{
     box-shadow: 5px 5px 5px rgba(0,0,0,.2);
     height: 35px;
 }
+
+#instafeed{}
+#instafeed .instagram_gallery{}
+#instafeed .instagram_gallery a{transition:all .2s}
+#instafeed .instagram_gallery a:hover{opacity:.6}
+#instafeed .instagram_gallery a img{max-width:100%;}
