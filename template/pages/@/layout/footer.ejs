@@ -219,9 +219,12 @@ const networksWithColors = [
             <img src="/assets/pp.png" alt="PayPal"/>
             <img src="/assets/ps.png" alt="PagSeguro"/> -->
             <% Object.keys(footer.payment_methods).forEach(method => { %>
-              <% if (footer.payment_methods[method]) { %>
+              <% if (footer.payment_methods[method] && method != "title") { %>
                 <!-- <img src="/assets/<%= method %>.png" alt="<%= method %>"/> -->
-                <i class="pay-icon pay-icon--<%= method %>"></i>
+                <!-- <i class="pay-icon pay-icon--<%= method %>"></i> -->
+                <span class="cover-payment">
+                  <img src="/assets/i_<%= method %>.png" alt="<%= method %>"/>
+                </span>
               <% } %>
             <% }) %>
           </p>

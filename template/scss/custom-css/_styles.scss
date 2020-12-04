@@ -1298,3 +1298,12 @@ header .toggleMenu:after{
     #lgpd button{}
     
 }
+
+.cover-payment{
+    border-radius: 3px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 7px 7px 0 0;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.2);
+    height: 35px;
+}

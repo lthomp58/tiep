@@ -21,7 +21,7 @@ if (imgObj) {
   <%
   const { specs } = opt.item
   if (specs && specs.length) {
-    const specCafe = specs.find(({ grid }) => grid === 'metodo')
+    const specCafe = specs.find(({ grid }) => grid === 'formato')
     if (specCafe) {
     %> 
       <span class="listing__labels <%- specCafe.text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase() %>" style="background-image:url(/img/uploads/tag_<%- specCafe.text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase() %>.png);"></span>
