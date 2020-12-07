@@ -135,8 +135,8 @@ $(document).ready(function() {
         'lazy_load':true,
         'callback': null,
         'styling': false,
-        'items': 6,
-        'items_per_row': 6,
+        'items': 8,
+        'items_per_row': 8,
         'margin': 1
     });
 })

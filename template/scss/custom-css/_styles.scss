@@ -1311,5 +1311,6 @@ header .toggleMenu:after{
 #instafeed{}
 #instafeed .instagram_gallery{}
 #instafeed .instagram_gallery a{transition:all .2s}
+#instafeed .instagram_gallery a:nth-child(n+7){display:none;}
 #instafeed .instagram_gallery a:hover{opacity:.6}
 #instafeed .instagram_gallery a img{max-width:100%;}
