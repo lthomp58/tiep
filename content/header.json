@@ -24,7 +24,16 @@
     "socials": true
   },
   "categories_list": {
-    "featured": [],
+    "featured": [
+      "/cafes?Cafés",
+      "/cafeteiras-e-metodos?Cafeteiras e Métodos",
+      "/acessorios?Acessórios",
+      "/moedores?Moedores",
+      "/filtros-e-suprimentos?Filtros e Suprimentos",
+      "/outras-bebidas?Outras Bebidas",
+      "/kits-e-presentes?Kits e Presentes",
+      "/promocoes?Promoções"
+    ],
     "random": 6,
     "full_width": true
   },
