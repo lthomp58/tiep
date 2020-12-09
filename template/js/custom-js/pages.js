@@ -100,7 +100,7 @@ $(document).ready(function() {
         'display_captions': false,
         'display_igtv': false,
         'get_raw_json': false,
-        'lazy_load':true,
+        'lazy_load':false,
         'callback': null,
         'styling': false,
         'items': 8,
