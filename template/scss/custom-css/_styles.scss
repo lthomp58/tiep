@@ -411,17 +411,17 @@
     margin: 1rem auto;
     text-align: center;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 #alpix .page--products #product-specs .table{
     max-width: 40%;
     margin: 1rem auto;
+    font-size:12px;
 }
 #alpix .page--products #product-specs .table td{background:transparent!important;color:#000!important;}
-#alpix .page--products #product-specs .table td:first-child{font-weight:600;color:#000;text-transform:uppercase;font-weight:800;}
+#alpix .page--products #product-specs .table td:first-child{font-weight:600;color:#000;font-weight:800;text-transform:uppercase}
 #alpix .page--products #product-specs .table td:last-child{
-    text-transform:uppercase;
     text-align:right;
 }
 #alpix .page--products .table-striped tbody tr:first-child td{border:0!important}
@@ -554,6 +554,7 @@
 #alpix .specification__row span .specification__ico.graudetorra.leve{background:#a67c52}
 #alpix .specification__row span .specification__ico.graudetorra.media{background:#603913}
 #alpix .specification__row span .specification__ico.graudetorra.forte{background:#000;}
+#alpix .page--products .product__resume:empty{display:none!important;}
 #alpix .specification__row:not(:empty){
     position: relative;
     padding-bottom: 1.5rem;
