@@ -1117,7 +1117,7 @@ header .toggleMenu:after{
     #alpix .page--products .html-clearfix,
     #alpix .page--products #product-specs .table{max-width:100%;}
     #alpix .page--products #product-specs .table{font-size:12px;}
-    #alpix .page--products p.lead{font-size: calc(1.275rem + .3vw);}
+    #alpix .page--products p.lead{font-size: calc(1rem + .3vw);}
     #alpix #cart-quickview button.minicart__btn-back{
         text-transform:uppercase;
         border-bottom:1px solid #000;
@@ -1237,6 +1237,20 @@ header .toggleMenu:after{
         min-height: unset;
         max-height: calc(100vh - 250px);
     }
+
+    #alpix .top-bar__countdown{font-size:11px;}
+    #alpix .search__count{width:100%;padding:8px 0}
+    #alpix .search__count > button{float:right;font-size:12px;margin:-8px 0;}
+    #alpix .product-card .product_list_adjust{padding-bottom:15px}
+    .glide__slide .product-card__name,
+    .glide__slide .product_list_adjust{height:auto!important}
+    #alpix .products-carousel .specification__row:not(:empty){padding-bottom:0}
+    #alpix .page--products .product__buy{
+        display: flex;
+        justify-content: center;
+    }
+    #alpix .page--products .product__name{font-size:1em}
+    
 }
 
 

@@ -67,7 +67,7 @@ if (header.categories_list) {
         <div class="top-bar__countdown" style="<%= marketingStripeStyle %>">
           <% if (header.marketing_stripe.text.split('|').length > 1) {
             header.marketing_stripe.text.split('|').forEach(function(i,j){  %>
-              <span class="<%- j > 0 ? 'd-none d-md-inline-block' : '' %>"><%- j > 0 ? ' | ' : '' %><%- i %></span>
+              <span class="<%- j > 0 ? '' : '' %>"><%- j > 0 ? ' | ' : '' %><%- i %></span>
             <% })
           }else{
           %>          
