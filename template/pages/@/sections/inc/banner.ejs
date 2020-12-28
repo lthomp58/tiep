@@ -71,10 +71,17 @@ if (opt.img) {
                 type="<%- type %>"
               <% } %>
             >
+            <source
+              srcset="<%= src.replace('.webp','.png') %>"
+              media="<%- media %>"
+              <% if (type) { %>
+                type="<%- type %>"
+              <% } %>
+            >
           <% }) %>
           
             
-            <img src="<%= opt.img.replace('.png', '.webp') %>" alt="<%= opt.alt %>" onerror="this.onerror=null; this.src='<%= opt.img.replace('.webp', '.png') %>'">
+            <img src="<%= opt.img.replace('.png', '.webp') %>" alt="<%= opt.alt %>">
           
         
       </picture>
