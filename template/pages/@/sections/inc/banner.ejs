@@ -63,17 +63,19 @@ if (opt.img) {
       <picture
           class="img-fluid"
       >
-        <% sources.forEach(({ src, media, type }) => { %>
-          <source
-            srcset="<%= src %>"
-            media="<%- media %>"
-            <% if (type) { %>
-              type="<%- type %>"
-            <% } %>
-          >
-        <% }) %>
-        
-          <img src="<%= opt.img.replace('.webp', '.png') %>" alt="<%= opt.alt %>">
+          <% sources.forEach(({ src, media, type }) => { %>
+            <source
+              srcset="<%= src.replace('.png','.webp') %>"
+              media="<%- media %>"
+              <% if (type) { %>
+                type="<%- type %>"
+              <% } %>
+            >
+          <% }) %>
+          
+            
+            <img src="<%= opt.img.replace('.png', '.webp') %>" alt="<%= opt.alt %>" onerror="this.onerror=null; this.src='<%= opt.img.replace('.webp', '.png') %>'">
+          
         
       </picture>
     </a>

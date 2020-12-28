@@ -18,7 +18,7 @@ if (_.pageName.includes('posts/') || _.pageName.includes('home') ) {
                 <% if (thumbnail) { %>
                   <a href="/posts/<%= slug %>">
                     <img
-                      src="<%= thumbnail %>"
+                      src="<%= thumbnail.replace('.png','.webp') %>"
                       class="card-img-top"
                       alt="<%= title %>"
                     >
