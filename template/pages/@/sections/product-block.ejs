@@ -58,9 +58,11 @@
             <% 
               const { brands } = _.state
              %> 
+            <% if (brands != undefined) { %>
             <p class="product__brand">
               Marca: <a href="<%= brands[0].slug %>"><%= brands[0].name %></a>
             </p>
+            <% } %>
           </div>
           <p class="product__resume pb-4 mb-5"><%=  _.state.meta_description %></p>
           
