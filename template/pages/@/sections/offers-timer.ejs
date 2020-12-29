@@ -34,7 +34,7 @@ if (Array.isArray(opt.offers) && opt.offers.length) {
         </div>
         <div class="col-12 col-md-4 offset-md-1 product-columns">
           <h3 class="text-center">
-            <%= items[0].name %>
+            <%= items[0] ? items[0].name : '' %>
           </h3>
           <% if (opt.notes) { %>
             <p class="text-center mb-4 pb-2"><%= opt.notes %></p>
