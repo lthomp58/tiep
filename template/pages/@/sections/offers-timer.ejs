@@ -4,7 +4,7 @@ if (Array.isArray(opt.offers) && opt.offers.length) {
   await search.setProductIds(opt.offers).fetch(true)
   const items = search.getItems().filter(item => _.ecomUtils.inStock(item))
   %>
-
+  <% if (items[0]) { %>
   <section class="offers-timer my-4 my-lg-5">
     <div class="container">
       <div class="row align-items-center">
@@ -34,7 +34,7 @@ if (Array.isArray(opt.offers) && opt.offers.length) {
         </div>
         <div class="col-12 col-md-4 offset-md-1 product-columns">
           <h3 class="text-center">
-            <%= items[0] ? items[0].name : '' %>
+            <%= items[0].name %>
           </h3>
           <% if (opt.notes) { %>
             <p class="text-center mb-4 pb-2"><%= opt.notes %></p>
@@ -44,4 +44,5 @@ if (Array.isArray(opt.offers) && opt.offers.length) {
       </div>
     </div>
   </section>
+  <% } %>
 <% } %>
