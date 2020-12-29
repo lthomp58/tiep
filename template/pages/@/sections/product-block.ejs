@@ -51,18 +51,27 @@
           <h1 class="product__name mb-3">
             <%= _.ecomUtils.name(_.state) %>
           </h1>
-          <div class="d-flex">
+          <div class="d-flex product__detail__info">
             <p class="product__sku">
               COD: <%= _.state.sku %>
+            </p>
+            <% 
+              const { brands } = _.state
+             %> 
+            <p class="product__brand">
+              Marca: <a href="<%= brands[0].slug %>"><%= brands[0].name %></a>
             </p>
           </div>
           <p class="product__resume pb-4 mb-5"><%=  _.state.meta_description %></p>
           
-          <div class="specification__row row d-flex justify-content-start">
+          <%
+          const { specifications } = _.state
+          
+          
+          %>
+          <div class="specification__row row d-flex justify-content-start <%= (specifications.metodo != undefined) || (specifications.graudetorra != undefined) ? '' : 'empty' %>">
             <%
-            const { specifications } = _.state
-            
-            if (specifications && specifications.metodo && specifications.metodo.length) {
+            if (specifications && specifications.metodo && specifications.metodo.length) {              
             %>
             <div class="col-auto">
               <label class="d-block specification__title" for="<%= specifications.metodo[0].value %>">
