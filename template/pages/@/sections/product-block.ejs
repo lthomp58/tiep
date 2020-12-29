@@ -71,9 +71,10 @@
           
           
           %>
+          <% if (specifications) { %>
           <div class="specification__row row d-flex justify-content-start <%= (specifications.metodo != undefined) || (specifications.graudetorra != undefined) ? '' : 'empty' %>">
             <%
-            if (specifications && specifications.metodo && specifications.metodo.length) {              
+            if (specifications.metodo && specifications.metodo.length) {              
             %>
             <div class="col-auto">
               <label class="d-block specification__title" for="<%= specifications.metodo[0].value %>">
@@ -82,7 +83,7 @@
               <span><i class="specification__ico metodo <%= specifications.metodo[0].value %>" style="background-image:url(/img/uploads/produto_<%= specifications.metodo[0].value %>.png)"></i><%= specifications.metodo[0].text %></span>
             </div>
            <% } 
-           if (specifications && specifications.graudetorra && specifications.graudetorra.length) {
+           if (specifications.graudetorra && specifications.graudetorra.length) {
             %>
             <div class="col-auto">
               <label class="d-block specification__title" for="<%= specifications.graudetorra[0].value %>">
@@ -92,6 +93,7 @@
             </div>
            <% } %>
           </div>
+          <% } %>
           
           <div id="product-actions">
             <div id="product-loading">
