@@ -329,14 +329,14 @@
 #alpix .specification__ico.metodo{
     height: 24px;
     width: 24px;
-    background-size: contain;
-    background-position: center;
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
     border-radius: 50%;
     margin-top: -2px;
+    background-position: center center;
+    background-size: 25px auto;
 }
 #alpix .page--products .variations__grid-title,
 #alpix .page--products .kit__title,
