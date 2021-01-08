@@ -1351,3 +1351,12 @@ header .toggleMenu:after{
 #instafeed .instagram_gallery a:nth-child(n+7){display:none;}
 #instafeed .instagram_gallery a:hover{opacity:.6}
 #instafeed .instagram_gallery a img{max-width:100%;}
+
+
+@media(min-width:990px){
+    #page-brands .product-item,
+    #page-categories .product-item{margin-bottom:3em}
+}
+
+.cart-item__data .cart-item__name > a{color:#666;font-size:16px;}
+.cart-item__thumb{width:50px;}
