@@ -4,7 +4,7 @@
     "show": true
   },
   "domain": "duasxicaras.netlify.app",
-  "currency_symbol": "R$",
+  "currency_symbol": "₫",
   "primary_color": "#fde9ce",
   "theme": {
     "bootswatch": "_",
@@ -18,14 +18,14 @@
     "text": "Aproveite o frete grátis em produtos selecionados!",
     "show": true
   },
-  "lang": "pt_br",
-  "currency": "BRL",
+  "lang": "en_us",
+  "currency": "VND",
   "mini_logo": "",
   "favicon": "/img/uploads/favicon-duas-xicaras.png",
   "country_code": "BR",
   "secondary_color": "#784226",
   "icon": "/img/uploads/favicon-duas-xicaras.png",
-  "store_id": 1137,
+  "store_id": 1210,
   "installments": {
     "text": "Parcele suas compras em até 4X sem juros no cartão!",
     "show": true
